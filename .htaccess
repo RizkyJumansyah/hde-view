@@ -1,10 +1,11 @@
 RewriteEngine On
 
-# 1. Menghilangkan .html dari URL (Internal Redirect)
+# 1. Menghilangkan index.html atau index dari URL secara otomatis
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html|php|htm)\ HTTP/ [NC,OR]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\ HTTP/ [NC]
+RewriteRule ^index(\.html|)$ / [R=301,L,NC]
+
+# 2. Aturan untuk file .html lainnya (agar bisa diakses tanpa .html)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-# 2. Redirect jika user mengetik .html secara manual (Optional tapi disarankan)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]

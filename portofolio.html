@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio & Lokasi | HDe Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .hde-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #f1f5f9;
+      }
+
+      .hde-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+        border-color: #e2e8f0;
+      }
+
+      .image-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .hde-card:hover .image-overlay {
+        opacity: 1;
+      }
+
+      .map-container {
+        filter: grayscale(100%) invert(92%) contrast(83%);
+        transition: all 0.5s ease;
+      }
+
+      .map-container:hover {
+        filter: grayscale(0%) invert(0%) contrast(100%);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900">
+    <nav
+      class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-slate-100 py-5"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+          href="index.html"
+          class="font-extrabold text-2xl tracking-tighter text-blue-700"
+        >
+          HDe <span class="text-slate-900 uppercase">Projects</span>
+        </a>
+        <a
+          href="index.html"
+          class="group flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-blue-600 transition-all"
+        >
+          <i
+            class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"
+          ></i>
+          Kembali
+        </a>
+      </div>
+    </nav>
+
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+      <div
+        class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none"
+      >
+        <div class="absolute top-10 left-10 text-[15rem] font-black italic">
+          PROJECTS
+        </div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <span
+          class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6"
+          >Experience Matters</span
+        >
+        <h1
+          class="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tighter"
+        >
+          Instalasi & Proyek <span class="text-blue-600">Terpilih.</span>
+        </h1>
+        <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed text-lg">
+          Membangun ekosistem digital untuk instansi pemerintah dan korporasi
+          dengan teknologi visual masa depan.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="hde-card bg-white rounded-[2.5rem] overflow-hidden group">
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="img/Produk/home/proyek/unnamed.jpg"
+                alt="Instalasi IFP"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="image-overlay absolute inset-0 flex items-end p-8">
+                <span
+                  class="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase"
+                  >Tech: 4K IFP 75"</span
+                >
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="w-8 h-px bg-blue-600"></span>
+                <span
+                  class="text-[10px] font-bold text-blue-600 uppercase tracking-[0.2em]"
+                  >Edukasi</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors"
+              >
+                Ruang Kelas Digital - Universitas ABC
+              </h3>
+              <p class="text-slate-500 text-sm mt-5 leading-relaxed">
+                Transformasi 12 ruang kelas konvensional menjadi pusat
+                pembelajaran hybrid yang interaktif.
+              </p>
+            </div>
+          </div>
+
+          <div class="hde-card bg-white rounded-[2.5rem] overflow-hidden group">
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="img/Produk/home/proyek/Gemini_Generated_Image_10y43110y43110y4.png"
+                alt="Instalasi Videotron"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="image-overlay absolute inset-0 flex items-end p-8">
+                <span
+                  class="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase"
+                  >Tech: LED P2.5 Indoor</span
+                >
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="w-8 h-px bg-emerald-500"></span>
+                <span
+                  class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em]"
+                  >Korporasi</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-bold text-slate-900 leading-tight group-hover:text-emerald-600 transition-colors"
+              >
+                Ballroom LED - Gedung Perkantoran XYZ
+              </h3>
+              <p class="text-slate-500 text-sm mt-5 leading-relaxed">
+                Instalasi videotron seluas 15m² dengan kerapatan pixel tinggi
+                untuk presentasi visual tajam.
+              </p>
+            </div>
+          </div>
+
+          <div class="hde-card bg-white rounded-[2.5rem] overflow-hidden group">
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="img/Produk/home/proyek/mrsroom.png"
+                alt="Instalasi Recording"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="image-overlay absolute inset-0 flex items-end p-8">
+                <span
+                  class="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase"
+                  >Tech: Auto Tracking AI</span
+                >
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="w-8 h-px bg-amber-500"></span>
+                <span
+                  class="text-[10px] font-bold text-amber-600 uppercase tracking-[0.2em]"
+                  >Pemerintahan</span
+                >
+              </div>
+              <h3
+                class="text-2xl font-bold text-slate-900 leading-tight group-hover:text-amber-600 transition-colors"
+              >
+                Command Center - Dinas Kominfo
+              </h3>
+              <p class="text-slate-500 text-sm mt-5 leading-relaxed">
+                Integrasi sistem perekaman cerdas yang mendukung transparansi
+                operasional data kota.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div
+          class="max-w-6xl mx-auto bg-white rounded-[3.5rem] shadow-2xl shadow-slate-200/50 overflow-hidden flex flex-wrap border border-slate-100"
+        >
+          <div
+            class="w-full lg:w-2/5 p-12 lg:p-16 bg-slate-900 text-white flex flex-col justify-between"
+          >
+            <div>
+              <span
+                class="text-blue-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block"
+                >Visit Our Office</span
+              >
+              <h2 class="text-3xl font-extrabold mb-10 leading-tight">
+                Hubungi Kami & <br />Konsultasi Gratis
+              </h2>
+
+              <div class="space-y-8">
+                <div class="flex items-start group">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors"
+                  >
+                    <i
+                      class="fas fa-map-marker-alt text-blue-500 group-hover:text-white transition-colors"
+                    ></i>
+                  </div>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Jl. RD Rangga Kencana No.53, <br />
+                    Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat
+                    40237
+                  </p>
+                </div>
+                <div class="flex items-center group">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors"
+                  >
+                    <i
+                      class="fas fa-phone text-blue-500 group-hover:text-white transition-colors"
+                    ></i>
+                  </div>
+                  <p class="text-slate-400 text-sm font-mono">
+                    021 - 1234 5678
+                  </p>
+                </div>
+                <div class="flex items-center group">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors"
+                  >
+                    <i
+                      class="fas fa-envelope text-blue-500 group-hover:text-white transition-colors"
+                    ></i>
+                  </div>
+                  <p class="text-slate-400 text-sm">support@hde.co.id</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/HXnsA9kh9g6f5XGa9"
+              target="_blank"
+              class="mt-16 inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-2xl font-bold transition-all active:scale-95 text-sm uppercase tracking-widest shadow-xl shadow-blue-900/20"
+            >
+              Petunjuk Lokasi <i class="fas fa-location-arrow ml-3"></i>
+            </a>
+          </div>
+
+          <div
+            class="w-full lg:w-3/5 h-[500px] lg:h-auto overflow-hidden map-container"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63367.6467837739!2d107.52627262167967!3d-6.9528132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e978bc9b8141%3A0x90f345e4601f683c!2sCV.%20Mabel%20Solusi%20Mandiri!5e0!3m2!1sid!2sid!4v1767932928348!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-12 text-center text-slate-400 text-xs font-medium border-t border-slate-100"
+    >
+      &copy; 2026 HDe Technology. All rights reserved.
+    </footer>
+  </body>
+</html>

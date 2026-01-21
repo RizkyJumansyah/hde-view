@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Recording System | HDe Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .bg-grid-pattern {
+        background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <nav
+      id="main-nav"
+      class="bg-slate-950/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/5 transition-all duration-500 transform translate-y-0 no-print"
+    >
+      <div
+        class="container mx-auto px-6 py-1 flex justify-between items-center transition-all duration-500"
+      >
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="flex items-center group relative py-1">
+            <div
+              class="relative flex items-center justify-center min-w-[50px] md:min-w-[70px]"
+            >
+              <div
+                class="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full scale-150 group-hover:scale-[2.5] transition-transform duration-1000 opacity-0 group-hover:opacity-100"
+              ></div>
+
+              <img
+                src="img/HDe-2.png"
+                alt=""
+                class="absolute h-10 md:h-14 w-auto object-contain opacity-10 blur-[4px] transition-all duration-700 scale-[1.5] md:scale-[1.8] group-hover:scale-[2] group-hover:opacity-20 filter brightness-200"
+              />
+
+              <img
+                src="img/HDe-2.png"
+                alt="HDe Logo"
+                class="h-10 md:h-14 w-auto object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] scale-125 md:scale-150"
+              />
+            </div>
+
+            <div
+              class="ml-8 md:ml-12 text-[10px] font-bold text-slate-300 uppercase tracking-[0.3em] hidden md:block border-l border-white/20 pl-4 leading-tight"
+            >
+              Recording<br /><span class="text-blue-400 font-black"
+                >System Solutions</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <a
+          href="index.html"
+          class="group flex items-center gap-3 bg-white/5 hover:bg-red-500/10 px-4 py-2 rounded-full transition-all duration-300 border border-white/10 hover:border-red-500/50"
+        >
+          <span
+            class="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-red-400 transition-colors"
+            >Kembali</span
+          >
+          <div
+            class="w-5 h-5 rounded-full bg-white/10 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-red-400 group-hover:rotate-90 transition-all duration-500"
+          >
+            <i class="fas fa-times text-sm"></i>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <div class="h-24 no-print"></div>
+
+    <style>
+      @keyframes logo-pulse {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 0px rgba(59, 130, 246, 0));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
+        }
+      }
+
+      .animate-logo-glow {
+        animation: logo-pulse 3s infinite ease-in-out;
+      }
+    </style>
+
+    <section id="mrs-intro" class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span
+              class="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6"
+            >
+              Solusi Rapat Modern
+            </span>
+            <h1
+              class="text-4xl md:text-5xl font-black mb-8 leading-tight text-slate-900 tracking-tighter"
+            >
+              Dokumentasi Rapat Otomatis, <br />
+              <span class="text-blue-600">Tanpa Operator Kamera.</span>
+            </h1>
+            <p class="text-slate-500 text-lg mb-10 leading-relaxed">
+              Sistem ini dirancang khusus untuk instansi yang ingin
+              mendokumentasikan rapat dengan profesional namun tetap simpel.
+              Kamera akan
+              <strong class="text-slate-900"
+                >mencari dan mengikuti pembicara secara otomatis</strong
+              >.
+            </p>
+
+            <div class="space-y-4 mb-10">
+              <div
+                class="flex gap-4 items-center p-4 bg-slate-50 rounded-2xl border border-slate-100"
+              >
+                <i class="fas fa-check-circle text-emerald-500"></i>
+                <span class="text-sm font-medium text-slate-700"
+                  >Hasil rekaman langsung tersimpan di harddisk sistem.</span
+                >
+              </div>
+              <div
+                class="flex gap-4 items-center p-4 bg-slate-50 rounded-2xl border border-slate-100"
+              >
+                <i class="fas fa-check-circle text-emerald-500"></i>
+                <span class="text-sm font-medium text-slate-700"
+                  >Audio jernih, suara peserta di ujung meja tetap
+                  terdengar.</span
+                >
+              </div>
+              <div
+                class="flex gap-4 items-center p-4 bg-slate-50 rounded-2xl border border-slate-100"
+              >
+                <i class="fas fa-check-circle text-emerald-500"></i>
+                <span class="text-sm font-medium text-slate-700"
+                  >Satu tombol operasional (Start/Stop Recording).</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="rounded-[3rem] overflow-hidden bg-slate-900 shadow-2xl border-[10px] border-white aspect-video relative group"
+            >
+              <img
+                src="img/Produk/Mrs/mrsroom.png"
+                alt="Ilustrasi Ruang Rapat MRS"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 flex items-center justify-center pointer-events-none"
+              >
+                <div
+                  class="w-24 h-24 border-2 border-blue-400 rounded-full animate-ping opacity-20"
+                ></div>
+                <div
+                  class="absolute border-2 border-white/50 w-48 h-32 rounded-lg flex items-start justify-end p-2"
+                >
+                  <span class="text-[8px] text-white font-mono bg-blue-600 px-1"
+                    >AUTO TRACKING ON</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden md:block max-w-[200px]"
+            >
+              <i class="fas fa-robot text-blue-600 mb-2"></i>
+              <p
+                class="text-[11px] font-bold text-slate-900 mb-1 tracking-tight"
+              >
+                Teknologi Pelacak Suara
+              </p>
+              <p class="text-[10px] text-slate-500 leading-tight">
+                Kamera menoleh otomatis saat ada peserta bicara.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-black text-slate-900 mb-4">
+            Kenapa Ruang Rapat Anda Butuh MRS?
+          </h2>
+          <p class="text-slate-500 max-w-2xl mx-auto">
+            Dokumentasi rapat manual seringkali berantakan. HDe hadir untuk
+            otomatisasi seluruh prosesnya.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-8 bg-red-50 rounded-3xl border border-red-100">
+            <h4
+              class="text-red-600 font-bold mb-4 uppercase tracking-wider text-xs"
+            >
+              Cara Lama (Manual)
+            </h4>
+            <ul class="space-y-4">
+              <li class="flex gap-3 text-sm text-slate-600">
+                <i class="fas fa-times-circle text-red-400 mt-1"></i>
+                Kamera statis, peserta yang jauh tidak terlihat.
+              </li>
+              <li class="flex gap-3 text-sm text-slate-600">
+                <i class="fas fa-times-circle text-red-400 mt-1"></i>
+                Suara bergema dan tidak jelas saat diputar ulang.
+              </li>
+              <li class="flex gap-3 text-sm text-slate-600">
+                <i class="fas fa-times-circle text-red-400 mt-1"></i>
+                Operator sibuk mengarahkan kamera secara manual.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="p-8 bg-blue-600 rounded-3xl text-white shadow-xl shadow-blue-200"
+          >
+            <h4
+              class="text-blue-200 font-bold mb-4 uppercase tracking-wider text-xs"
+            >
+              Solusi HDe Technology (Otomatis)
+            </h4>
+            <ul class="space-y-4">
+              <li class="flex gap-3 text-sm">
+                <i class="fas fa-check-circle text-blue-300 mt-1"></i>
+                Kamera bergerak otomatis mengikuti siapa yang bicara.
+              </li>
+              <li class="flex gap-3 text-sm">
+                <i class="fas fa-check-circle text-blue-300 mt-1"></i>
+                Audio jernih standar broadcast, siap diarsipkan.
+              </li>
+              <li class="flex gap-3 text-sm">
+                <i class="fas fa-check-circle text-blue-300 mt-1"></i>
+                Tekan satu tombol: Rekam, Simpan, dan Selesai.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="workflow"
+      class="py-24 bg-slate-950 text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 blur-[120px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-600/10 blur-[120px] pointer-events-none"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-24">
+          <h4
+            class="text-blue-400 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+          >
+            Sistem Kerja Otomatis
+          </h4>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-6">
+            Bagaimana MRS <span class="text-blue-500">Bekerja?</span>
+          </h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+            Menghilangkan kerumitan dokumentasi rapat konvensional. Biarkan
+            teknologi kami yang bekerja, Anda cukup fokus pada isi rapat.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 relative">
+          <div
+            class="hidden md:block absolute top-1/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-slate-800 to-transparent z-0"
+          ></div>
+
+          <div class="group relative z-10">
+            <div
+              class="w-20 h-20 bg-slate-900 border border-slate-800 text-blue-500 rounded-[2rem] flex items-center justify-center text-3xl mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-500 shadow-xl group-hover:shadow-blue-500/20"
+            >
+              <i class="fas fa-microphone-lines"></i>
+            </div>
+            <div
+              class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 hover:border-slate-700 transition-colors"
+            >
+              <span
+                class="inline-block text-[10px] font-black bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full mb-4"
+                >TAHAP 01</span
+              >
+              <h4 class="text-xl font-bold mb-4">Deteksi Suara Aktif</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Sistem mikrofon cerdas mendeteksi arah suara peserta rapat yang
+                sedang berbicara secara instan (real-time).
+              </p>
+            </div>
+          </div>
+
+          <div class="group relative z-10">
+            <div
+              class="w-20 h-20 bg-slate-900 border border-slate-800 text-emerald-500 rounded-[2rem] flex items-center justify-center text-3xl mx-auto mb-8 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-500 transition-all duration-500 shadow-xl group-hover:shadow-emerald-500/20"
+            >
+              <i class="fas fa-video"></i>
+            </div>
+            <div
+              class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 hover:border-slate-700 transition-colors"
+            >
+              <span
+                class="inline-block text-[10px] font-black bg-emerald-600/20 text-emerald-400 px-3 py-1 rounded-full mb-4"
+                >TAHAP 02</span
+              >
+              <h4 class="text-xl font-bold mb-4">Kamera Menoleh Otomatis</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Kamera PTZ HDe menerima sinyal koordinat dan otomatis menoleh
+                serta melakukan <span class="text-white">zoom</span> ke wajah
+                pembicara.
+              </p>
+            </div>
+          </div>
+
+          <div class="group relative z-10">
+            <div
+              class="w-20 h-20 bg-slate-900 border border-slate-800 text-amber-500 rounded-[2rem] flex items-center justify-center text-3xl mx-auto mb-8 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-500 transition-all duration-500 shadow-xl group-hover:shadow-amber-500/20"
+            >
+              <i class="fas fa-file-arrow-down"></i>
+            </div>
+            <div
+              class="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 hover:border-slate-700 transition-colors"
+            >
+              <span
+                class="inline-block text-[10px] font-black bg-amber-600/20 text-amber-400 px-3 py-1 rounded-full mb-4"
+                >TAHAP 03</span
+              >
+              <h4 class="text-xl font-bold mb-4">Rekam & Simpan</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Hasil rekaman audio & video diproses dan disimpan otomatis dalam
+                format <span class="text-white">MP4</span>, siap dipindahkan ke
+                flashdisk atau cloud.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-20 flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-white/5 border border-white/5 rounded-[2rem]"
+        >
+          <div class="flex -space-x-3">
+            <div
+              class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-slate-950 text-[10px] font-bold"
+            >
+              1
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center border-2 border-slate-950 text-[10px] font-bold"
+            >
+              2
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center border-2 border-slate-950 text-[10px] font-bold"
+            >
+              3
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic">
+            "Proses dari tahap 1 hingga 3 berlangsung secara otomatis tanpa
+            campur tangan operator."
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="mrs-package" class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+        >
+          <div class="max-w-2xl">
+            <h4
+              class="text-blue-600 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+            >
+              Paket Siap Pakai
+            </h4>
+            <h2
+              class="text-4xl font-black text-slate-900 tracking-tighter leading-tight"
+            >
+              Solusi All-in-One <br />
+              <span class="text-slate-400 font-medium text-3xl"
+                >Tersedia di E-Katalog LKPP</span
+              >
+            </h2>
+          </div>
+          <!-- <div class="pb-2">
+            <a
+              href="https://katalog.inaproc.id/search?keyword=HDe+meeting&page=1"
+              target="_blank"
+              class="flex items-center gap-3 bg-slate-100 px-6 py-3 rounded-2xl hover:bg-slate-200 transition-all group"
+            >
+              <img
+                src="img/sertifikat/tkdn40-e1728012467600.png"
+                alt="LKPP"
+                class="h-6 grayscale group-hover:grayscale-0 transition-all"
+              />
+              <span
+                class="text-xs font-bold text-slate-600 uppercase tracking-widest"
+                >Lihat Detail Harga</span
+              >
+            </a>
+          </div> -->
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"
+            >
+              <i class="fas fa-video text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-4 tracking-tight">
+              AI PTZ Camera
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              Kamera cerdas yang bisa
+              <span class="text-slate-900 font-bold"
+                >menoleh, menunduk, dan zoom otomatis</span
+              >
+              tanpa perlu operator. Sangat tajam untuk menangkap ekspresi wajah
+              peserta rapat.
+            </p>
+            <ul
+              class="text-[11px] font-bold text-blue-600 space-y-2 uppercase tracking-tighter"
+            >
+              <li><i class="fas fa-check mr-2"></i> 20x Optical Zoom</li>
+              <li><i class="fas fa-check mr-2"></i> Auto-Tracking Pembicara</li>
+            </ul>
+          </div>
+
+          <div
+            class="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"
+            >
+              <i class="fas fa-microphone-alt text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-4 tracking-tight">
+              Audio Processor
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              Sistem mikrofon yang dirancang untuk
+              <span class="text-slate-900 font-bold"
+                >menghilangkan gema (Echo)</span
+              >
+              dan kebisingan AC, sehingga suara rekaman jernih seperti di
+              studio.
+            </p>
+            <ul
+              class="text-[11px] font-bold text-blue-600 space-y-2 uppercase tracking-tighter"
+            >
+              <li><i class="fas fa-check mr-2"></i> Noise Cancellation</li>
+              <li><i class="fas fa-check mr-2"></i> Clear Human Voice</li>
+            </ul>
+          </div>
+
+          <div
+            class="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"
+            >
+              <i class="fas fa-hdd text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-4 tracking-tight">
+              Recording Station
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              "Otak" dari seluruh sistem. Menyatukan video dan audio menjadi
+              satu file MP4 yang
+              <span class="text-slate-900 font-bold">langsung tersimpan</span>
+              di penyimpanan internal.
+            </p>
+            <ul
+              class="text-[11px] font-bold text-blue-600 space-y-2 uppercase tracking-tighter"
+            >
+              <li><i class="fas fa-check mr-2"></i> One-Click Recording</li>
+              <li><i class="fas fa-check mr-2"></i> Kapasitas Besar 1TB+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mrs-configurator" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div
+          class="max-w-6xl mx-auto bg-white rounded-[3rem] shadow-xl p-8 md:p-12 border border-gray-100"
+        >
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-2xl font-black mb-2 text-slate-900">
+                  Kelengkapan Paket Sistem
+                </h3>
+                <p class="text-gray-500 text-sm">
+                  Satu solusi lengkap untuk digitalisasi ruang rapat atau ruang
+                  kelas Anda.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-3">
+                <div
+                  class="group flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all"
+                >
+                  <div
+                    class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold shadow-lg shadow-blue-600/20"
+                  >
+                    01
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold text-slate-900 uppercase">
+                      Core System
+                    </p>
+                    <p class="text-[11px] text-slate-500">
+                      1 Video Station & 1 Intelligent Recording Server
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all"
+                >
+                  <div
+                    class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold shadow-lg shadow-blue-600/20"
+                  >
+                    02
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold text-slate-900 uppercase">
+                      Visual Tracking
+                    </p>
+                    <p class="text-[11px] text-slate-500">
+                      2 Unit Auto-Tracking Camera (PTZ)
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all"
+                >
+                  <div
+                    class="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold shadow-lg shadow-blue-600/20"
+                  >
+                    03
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold text-slate-900 uppercase">
+                      Audio Capture
+                    </p>
+                    <p class="text-[11px] text-slate-500">
+                      1 Ceiling Mic & 1 Intelligent Array Mic
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <span
+                  class="bg-blue-50 text-blue-700 text-[10px] font-bold px-4 py-2 rounded-lg border border-blue-100"
+                  >TKDN 40%</span
+                >
+                <span
+                  class="bg-emerald-50 text-emerald-700 text-[10px] font-bold px-4 py-2 rounded-lg border border-emerald-100"
+                  >POSTEL Certified</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 rounded-[3rem] p-10 text-white shadow-2xl relative overflow-hidden"
+            >
+              <div class="absolute top-0 right-0 p-8 opacity-10">
+                <i class="fas fa-shield-check text-8xl"></i>
+              </div>
+
+              <div class="relative z-10">
+                <span
+                  class="text-indigo-400 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block"
+                >
+                  Data Security System
+                </span>
+                <h3
+                  class="text-2xl md:text-3xl font-black mb-6 md:mb-8 uppercase tracking-tight leading-tight"
+                >
+                  HDe Meeting <br />Recording System
+                </h3>
+
+                <div class="space-y-6 mb-8 md:mb-10">
+                  <div
+                    class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-white/10 pb-6 gap-4 sm:gap-0"
+                  >
+                    <div>
+                      <p
+                        class="text-[9px] md:text-[10px] text-slate-500 uppercase font-bold mb-2 tracking-widest"
+                      >
+                        Standar Integritas Data
+                      </p>
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"
+                        ></div>
+                        <p
+                          class="text-lg md:text-xl font-bold text-white tracking-tight uppercase"
+                        >
+                          End-to-End Encryption
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="text-left sm:text-right">
+                      <p
+                        class="text-[9px] font-bold text-emerald-400 uppercase mb-1"
+                      >
+                        Secure Storage
+                      </p>
+                      <p
+                        class="text-[9px] text-slate-400 uppercase font-medium"
+                      >
+                        Local & Cloud Sync
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <button
+                    onclick="sendMRSWA()"
+                    class="w-full bg-indigo-600 text-white py-4 md:py-5 px-4 rounded-2xl font-bold hover:bg-indigo-700 transition-all flex items-center justify-center gap-3 shadow-lg shadow-indigo-600/30 uppercase tracking-widest text-[10px] md:text-xs"
+                  >
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span class="leading-tight">Konsultasi Produk & Harga</span>
+                  </button>
+
+                  <div
+                    class="flex items-start gap-3 py-4 px-5 md:px-6 bg-white/5 rounded-2xl border border-white/5"
+                  >
+                    <i
+                      class="fas fa-info-circle text-indigo-400 text-xs mt-1"
+                    ></i>
+                    <p
+                      class="text-[10px] text-slate-400 leading-relaxed italic"
+                    >
+                      Harga bersifat
+                      <span class="text-white font-bold">Project-Based</span>.
+                      Hubungi kami untuk konfigurasi sistem yang sesuai dengan
+                      kebutuhan ruang rapat Anda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-24 bg-gray-950 text-white overflow-hidden border-t border-white/5 relative"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 blur-[100px]"
+      ></div>
+
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h4
+            class="text-blue-500 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+          >
+            Smart Automation
+          </h4>
+          <h2
+            class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter"
+          >
+            Satu Sentuhan, <span class="text-blue-500">Kendali Penuh</span>
+          </h2>
+          <p class="text-gray-400 text-sm max-w-xl mx-auto">
+            Hilangkan kerumitan kabel dan remote. Sistem HDe mengintegrasikan
+            Videotron, Audio, dan Kamera dalam satu kendali terpusat.
+          </p>
+        </div>
+
+        <div
+          class="max-w-5xl mx-auto bg-slate-900/40 border border-white/10 rounded-[3rem] p-6 md:p-10 shadow-2xl relative backdrop-blur-sm"
+        >
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+              <div
+                id="screen-status"
+                class="aspect-video bg-black rounded-[2rem] flex flex-col items-center justify-center border-8 border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-all duration-700 relative overflow-hidden group"
+              >
+                <div
+                  id="screen-glow"
+                  class="absolute inset-0 opacity-0 transition-opacity duration-1000 pointer-events-none"
+                ></div>
+
+                <div
+                  id="screen-content"
+                  class="text-center opacity-30 transition-all duration-500 z-10"
+                >
+                  <i
+                    id="status-icon"
+                    class="fas fa-power-off text-5xl mb-4 text-slate-700 transition-all duration-500"
+                  ></i>
+                  <p
+                    id="status-text"
+                    class="text-[10px] font-mono tracking-[0.3em] uppercase text-slate-500"
+                  >
+                    System Standby
+                  </p>
+                </div>
+
+                <div
+                  class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] pointer-events-none"
+                ></div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-2xl bg-black/60 border border-white/5 flex items-center gap-3"
+                >
+                  <div
+                    id="cam-led"
+                    class="w-2 h-2 rounded-full bg-slate-700 transition-colors"
+                  ></div>
+                  <div>
+                    <p
+                      class="text-[8px] uppercase text-slate-500 tracking-widest"
+                    >
+                      Camera
+                    </p>
+                    <p
+                      id="cam1-stat"
+                      class="text-[10px] font-bold text-slate-600 uppercase"
+                    >
+                      Offline
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-2xl bg-black/60 border border-white/5 flex items-center gap-3"
+                >
+                  <div
+                    id="rec-led"
+                    class="w-2 h-2 rounded-full bg-slate-700 transition-colors"
+                  ></div>
+                  <div>
+                    <p
+                      class="text-[8px] uppercase text-slate-500 tracking-widest"
+                    >
+                      Server
+                    </p>
+                    <p
+                      id="rec-stat"
+                      class="text-[10px] font-bold text-slate-600 uppercase"
+                    >
+                      Idle
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <button
+                onclick="setScenario('presentation')"
+                id="btn-pres"
+                class="scenario-btn w-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all text-left group relative"
+              >
+                <span
+                  class="block font-black text-xs uppercase tracking-widest mb-1 group-hover:text-blue-400"
+                  >01. Mode Presentasi</span
+                >
+                <span class="block text-[10px] text-slate-500"
+                  >Optimasi visual videotron untuk konten materi.</span
+                >
+              </button>
+
+              <button
+                onclick="setScenario('recording')"
+                id="btn-rec"
+                class="scenario-btn w-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all text-left group relative"
+              >
+                <span
+                  class="block font-black text-xs uppercase tracking-widest mb-1 group-hover:text-emerald-400"
+                  >02. Mode Recording</span
+                >
+                <span class="block text-[10px] text-slate-500"
+                  >Auto-tracking kamera & aktivasi server rekam.</span
+                >
+              </button>
+
+              <button
+                onclick="setScenario('off')"
+                id="btn-off"
+                class="scenario-btn w-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 transition-all text-left group"
+              >
+                <span
+                  class="block font-black text-xs uppercase tracking-widest mb-1 group-hover:text-red-400"
+                  >03. System Off</span
+                >
+                <span class="block text-[10px] text-slate-500"
+                  >Cooling-down sistem & proteksi daya.</span
+                >
+              </button>
+
+              <div
+                class="mt-4 p-4 rounded-xl bg-blue-500/5 border border-blue-500/10"
+              >
+                <p
+                  class="text-[9px] text-blue-400/80 leading-relaxed uppercase tracking-tighter"
+                >
+                  *Sistem mendukung integrasi dengan tablet iPad/Android & Panel
+                  Dinding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function setScenario(type) {
+        const screen = document.getElementById("screen-status");
+        const screenContent = document.getElementById("screen-content");
+        const screenGlow = document.getElementById("screen-glow");
+        const icon = document.getElementById("status-icon");
+        const statusText = document.getElementById("status-text");
+        const camLed = document.getElementById("cam-led");
+        const recLed = document.getElementById("rec-led");
+        const camStat = document.getElementById("cam1-stat");
+        const recStat = document.getElementById("rec-stat");
+
+        // Reset All Buttons
+        document.querySelectorAll(".scenario-btn").forEach((btn) => {
+          btn.classList.remove(
+            "bg-blue-600/10",
+            "border-blue-500",
+            "bg-emerald-600/10",
+            "border-emerald-500",
+            "bg-red-600/10",
+            "border-red-500"
+          );
+        });
+
+        if (type === "presentation") {
+          // UI Changes
+          screen.style.borderColor = "#1e40af";
+          screenGlow.style.background =
+            "radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%)";
+          screenGlow.style.opacity = "1";
+          screenContent.style.opacity = "1";
+          icon.className =
+            "fas fa-desktop text-5xl mb-4 text-blue-400 animate-pulse";
+          statusText.innerText = "Presentation Mode Active";
+          statusText.classList.replace("text-slate-500", "text-blue-400");
+
+          // Stats
+          camLed.className =
+            "w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]";
+          camStat.innerText = "Active";
+          camStat.className = "text-[10px] font-bold text-blue-400 uppercase";
+          recLed.className = "w-2 h-2 rounded-full bg-slate-700";
+          recStat.innerText = "Idle";
+          recStat.className = "text-[10px] font-bold text-slate-600 uppercase";
+
+          document
+            .getElementById("btn-pres")
+            .classList.add("bg-blue-600/10", "border-blue-500");
+        } else if (type === "recording") {
+          screen.style.borderColor = "#065f46";
+          screenGlow.style.background =
+            "radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 70%)";
+          screenGlow.style.opacity = "1";
+          screenContent.style.opacity = "1";
+          icon.className =
+            "fas fa-record-vinyl text-5xl mb-4 text-emerald-400 animate-spin-slow";
+          statusText.innerText = "Recording & Streaming...";
+          statusText.classList.replace("text-slate-500", "text-emerald-400");
+
+          camLed.className =
+            "w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]";
+          camStat.innerText = "Tracking";
+          camStat.className =
+            "text-[10px] font-bold text-emerald-400 uppercase";
+          recLed.className =
+            "w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_#ef4444]";
+          recStat.innerText = "Recording";
+          recStat.className = "text-[10px] font-bold text-red-500 uppercase";
+
+          document
+            .getElementById("btn-rec")
+            .classList.add("bg-emerald-600/10", "border-emerald-500");
+        } else {
+          // Off Mode
+          screen.style.borderColor = "#1e293b";
+          screenGlow.style.opacity = "0";
+          screenContent.style.opacity = "0.3";
+          icon.className = "fas fa-power-off text-5xl mb-4 text-slate-700";
+          statusText.innerText = "System Standby";
+          statusText.className =
+            "text-[10px] font-mono tracking-[0.3em] uppercase text-slate-500";
+
+          camLed.className = "w-2 h-2 rounded-full bg-slate-700";
+          camStat.innerText = "Offline";
+          camStat.className = "text-[10px] font-bold text-slate-600 uppercase";
+          recLed.className = "w-2 h-2 rounded-full bg-slate-700";
+          recStat.innerText = "Idle";
+          recStat.className = "text-[10px] font-bold text-slate-600 uppercase";
+
+          document
+            .getElementById("btn-off")
+            .classList.add("bg-red-600/10", "border-red-500");
+        }
+      }
+
+      // Tambahkan CSS animasi di style tag jika belum ada
+      // @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      // .animate-spin-slow { animation: spin-slow 3s linear infinite; }
+    </script>
+
+    <section id="specs" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h3
+              class="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tighter text-slate-900"
+            >
+              Spesifikasi Detail Sistem
+            </h3>
+            <p class="text-slate-500 text-sm">
+              Parameter teknis standar paket HDe Meeting Recording System.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div
+              class="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-slate-50 rounded-3xl hover:bg-slate-100 transition-colors border border-transparent hover:border-slate-200"
+            >
+              <div class="flex items-center gap-4 mb-2 sm:mb-0">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm"
+                >
+                  <i class="fas fa-plug text-slate-400 text-xs"></i>
+                </div>
+                <span
+                  class="font-bold text-slate-400 text-[10px] uppercase tracking-[0.2em]"
+                  >Video Input</span
+                >
+              </div>
+              <span class="text-slate-700 text-sm font-semibold"
+                >Multi-Channel HDMI / SDI / IP (RTSP)</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-white border border-slate-100 rounded-3xl hover:bg-slate-50 transition-colors"
+            >
+              <div class="flex items-center gap-4 mb-2 sm:mb-0">
+                <div
+                  class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center shadow-sm"
+                >
+                  <i class="fas fa-expand text-slate-400 text-xs"></i>
+                </div>
+                <span
+                  class="font-bold text-slate-400 text-[10px] uppercase tracking-[0.2em]"
+                  >Resolusi Rekam</span
+                >
+              </div>
+              <span class="text-slate-700 text-sm font-semibold"
+                >Ultra HD 4K @60fps (Crystal Clear)</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-slate-50 rounded-3xl hover:bg-slate-100 transition-colors border border-transparent hover:border-slate-200"
+            >
+              <div class="flex items-center gap-4 mb-2 sm:mb-0">
+                <div
+                  class="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm"
+                >
+                  <i class="fas fa-hdd text-slate-400 text-xs"></i>
+                </div>
+                <span
+                  class="font-bold text-slate-400 text-[10px] uppercase tracking-[0.2em]"
+                  >Penyimpanan</span
+                >
+              </div>
+              <span class="text-slate-700 text-sm font-semibold"
+                >1TB Internal (Hingga 500+ Jam Rekaman)</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-6 bg-white border border-slate-100 rounded-3xl hover:bg-slate-50 transition-colors"
+            >
+              <div class="flex items-center gap-4 mb-2 sm:mb-0">
+                <div
+                  class="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center shadow-sm"
+                >
+                  <i class="fas fa-robot text-slate-400 text-xs"></i>
+                </div>
+                <span
+                  class="font-bold text-slate-400 text-[10px] uppercase tracking-[0.2em]"
+                  >Teknologi AI</span
+                >
+              </div>
+              <span class="text-slate-700 text-sm font-semibold"
+                >Face Detection & Voice Localization</span
+              >
+            </div>
+
+            <div
+              class="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-8 bg-blue-600 rounded-[2.5rem] shadow-xl shadow-blue-100 mt-8"
+            >
+              <div class="flex items-center gap-4 mb-4 sm:mb-0">
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center border border-white/30"
+                >
+                  <i class="fas fa-certificate text-white text-sm"></i>
+                </div>
+                <div>
+                  <span
+                    class="font-bold text-blue-200 text-[10px] uppercase tracking-[0.2em] block"
+                    >Legalitas & Kepatuhan</span
+                  >
+                  <span class="text-white font-black text-lg"
+                    >Sertifikasi Resmi</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-3 justify-end">
+                <span
+                  class="bg-white text-blue-700 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm"
+                  >TKDN 40%</span
+                >
+                <!-- <span
+                  class="bg-white text-blue-700 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm"
+                  >POSTEL SDPPI</span
+                > -->
+                <!-- <span
+                  class="bg-white text-blue-700 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm"
+                  >ISO 9001:2015</span
+                > -->
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 p-6 border-t border-slate-100"
+          >
+            <p
+              class="text-[11px] text-slate-400 italic text-center md:text-left"
+            >
+              * Spesifikasi dapat bervariasi tergantung paket (MRS-01, MRS-02,
+              dsb) yang dipilih di E-Katalog.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer class="bg-white border-t border-slate-100">
+      <div class="container mx-auto px-6 py-16">
+        <div class="flex flex-col items-center">
+          <div class="mb-8">
+            <h2
+              class="text-xl font-black tracking-tighter text-slate-900 uppercase"
+            >
+              HDe<span class="text-blue-600">Technology</span>
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-8 mb-12">
+            <a
+              href="#mrs-intro"
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors"
+              >Produk</a
+            >
+            <a
+              href="#workflow"
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors"
+              >Cara Kerja</a
+            >
+            <a
+              href="#specs"
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors"
+              >Spesifikasi</a
+            >
+            <a
+              href="https://katalog.inaproc.id/search?keyword=HDe%20meeting&page=1"
+              target="_blank"
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors"
+              >E-Katalog</a
+            >
+          </div>
+
+          <div class="flex gap-6 mb-12 text-slate-300">
+            <a href="#" class="hover:text-slate-900 transition-colors"
+              ><i class="fab fa-instagram text-lg"></i
+            ></a>
+            <a href="#" class="hover:text-slate-900 transition-colors"
+              ><i class="fab fa-linkedin text-lg"></i
+            ></a>
+            <a href="#" class="hover:text-slate-900 transition-colors"
+              ><i class="fab fa-youtube text-lg"></i
+            ></a>
+          </div>
+
+          <div class="text-center border-t border-slate-50 w-full pt-8">
+            <p
+              class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-2"
+            >
+              &copy; 2026 HDe Technology. All Rights Reserved.
+            </p>
+            <p class="text-slate-300 text-[9px] uppercase tracking-widest">
+              Part of CV. Mabel Solusi Mandiri - Solusi Visual & Dokumentasi
+              Cerdas
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <script>
+      // Function for WhatsApp
+      function sendMRSWA() {
+        const msg =
+          "Halo HDe Technology,\n\n" +
+          "Saya tertarik dengan produk *HDe Meeting Recording* (TKDN 40%) yang terdaftar di E-Katalog.\n\n" +
+          "*Informasi Detail Produk:* \n" +
+          "• Unit: HDe Meeting Recording System\n" +
+          // "• Harga Katalog: Rp 250.000.001 (Termasuk PPN 12%)\n" +
+          "• Spesifikasi: 1 Video Station, 2 Auto-Tracking Camera, 1 Ceiling Mic, 1 Recording Server, 1 Array Mic, 1 Audio Processor.\n" +
+          "• Legalitas: TKDN 40%\n" +
+          "• Garansi: 2 Tahun \n\n" +
+          "Mohon dibantu untuk informasi ketersediaan stok dan pengaturan jadwal survei lokasi instalasi. Terima kasih.";
+
+        window.open(
+          `https://wa.me/6281387873874?text=${encodeURIComponent(msg)}`,
+          "_blank"
+        );
+      }
+
+      // Function for Simulator
+      function setScenario(type) {
+        const screen = document.getElementById("screen-status");
+        const icon = document.getElementById("status-icon");
+        const cam = document.getElementById("cam1-stat");
+        const rec = document.getElementById("rec-stat");
+
+        if (type === "presentation") {
+          screen.className =
+            "aspect-video bg-blue-600/20 rounded-2xl flex items-center justify-center border-2 border-blue-500 transition-all shadow-[0_0_30px_rgba(37,99,235,0.3)]";
+          icon.className =
+            "fas fa-desktop text-4xl text-blue-500 animate-pulse";
+          cam.innerText = "Standby";
+          cam.className = "text-[10px] font-bold text-amber-500 uppercase";
+          rec.innerText = "Ready";
+          rec.className = "text-[10px] font-bold text-slate-500 uppercase";
+        } else if (type === "recording") {
+          screen.className =
+            "aspect-video bg-emerald-600/20 rounded-2xl flex items-center justify-center border-2 border-emerald-500 transition-all shadow-[0_0_30px_rgba(16,185,129,0.3)]";
+          icon.className =
+            "fas fa-video text-4xl text-emerald-500 animate-bounce";
+          cam.innerText = "Tracking";
+          cam.className = "text-[10px] font-bold text-emerald-500 uppercase";
+          rec.innerText = "Live On";
+          rec.className = "text-[10px] font-bold text-red-500 uppercase";
+        } else {
+          screen.className =
+            "aspect-video bg-slate-800 rounded-2xl flex items-center justify-center border-2 border-slate-700 transition-all";
+          icon.className = "fas fa-power-off text-4xl text-slate-600";
+          cam.innerText = "Offline";
+          cam.className = "text-[10px] font-bold text-red-500 uppercase";
+          rec.innerText = "Ready";
+          rec.className = "text-[10px] font-bold text-slate-500 uppercase";
+        }
+      }
+    </script>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.getElementById("main-nav");
+
+      window.addEventListener(
+        "scroll",
+        function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scroll Down - Sembunyikan Navbar
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            // Scroll Up - Tampilkan Navbar
+            navbar.style.transform = "translateY(0)";
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Untuk menangani mobile bounce
+        },
+        false
+      );
+    </script>
+    <script>
+      let lastScrollY = window.scrollY;
+      const nav = document.getElementById("main-nav");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+          // Scroll Down - Sembunyikan Navbar
+          nav.style.transform = "translateY(-100%)";
+        } else {
+          // Scroll Up - Tampilkan Navbar
+          nav.style.transform = "translateY(0)";
+        }
+        lastScrollY = window.scrollY;
+      });
+    </script>
+  </body>
+</html>

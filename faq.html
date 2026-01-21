@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Center | HDe Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .faq-answer.active {
+        opacity: 1;
+      }
+      .rotate-icon {
+        transform: rotate(180deg);
+        color: #1d4ed8;
+      }
+      .category-btn.active {
+        background-color: #1d4ed8;
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="main-navbar"
+      class="bg-slate-950/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/5 transition-all duration-500 transform translate-y-0"
+    >
+      <div
+        id="navbar-container"
+        class="container mx-auto px-6 py-1 flex justify-between items-center transition-all duration-500"
+      >
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="flex items-center group relative py-1">
+            <div
+              class="relative flex items-center justify-center min-w-[50px] md:min-w-[70px]"
+            >
+              <div
+                class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 group-hover:scale-[2.5] transition-transform duration-1000 opacity-0 group-hover:opacity-100"
+              ></div>
+
+              <img
+                src="img/HDe-2.png"
+                alt=""
+                class="absolute h-10 md:h-14 w-auto object-contain opacity-10 blur-[4px] transition-all duration-700 scale-[1.5] md:scale-[1.8] group-hover:scale-[2] group-hover:opacity-20 filter brightness-200"
+              />
+
+              <img
+                src="img/HDe-2.png"
+                alt="HDe Logo"
+                class="h-10 md:h-14 w-auto object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] scale-125 md:scale-150"
+              />
+            </div>
+
+            <div
+              class="ml-8 md:ml-12 text-[10px] font-bold text-slate-300 uppercase tracking-[0.3em] hidden md:block border-l border-white/20 pl-4 leading-tight"
+            >
+              HELP<br /><span class="text-blue-400 font-black">CENTER</span>
+            </div>
+          </a>
+        </div>
+
+        <a
+          href="index.html"
+          class="group flex items-center gap-3 bg-white/5 hover:bg-red-500/10 px-4 py-2 rounded-full transition-all duration-300 border border-white/10 hover:border-red-500/50"
+        >
+          <span
+            class="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-red-400 transition-colors"
+            >Kembali</span
+          >
+          <div
+            class="w-5 h-5 rounded-full bg-white/10 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-red-400 group-hover:rotate-90 transition-all duration-500"
+          >
+            <i class="fas fa-times text-sm"></i>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <section class="bg-blue-700 py-20 text-white relative overflow-hidden">
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1
+          class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter"
+        >
+          Knowledge Base & FAQ
+        </h1>
+        <div class="max-w-2xl mx-auto relative">
+          <input
+            type="text"
+            id="faqSearch"
+            onkeyup="searchFaq()"
+            placeholder="Cari solusi (misal: 'P4', 'Android', 'Garansi')..."
+            class="w-full p-6 pl-14 rounded-2xl text-gray-800 outline-none shadow-2xl focus:ring-4 focus:ring-blue-400/50 transition font-medium"
+          />
+          <i
+            class="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 text-xl"
+          ></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="flex flex-wrap gap-2 justify-center mb-12">
+          <button
+            onclick="filterFaq('all', this)"
+            class="category-btn active px-6 py-2.5 rounded-full font-bold text-[11px] uppercase tracking-widest border border-gray-200 transition"
+          >
+            Semua
+          </button>
+          <button
+            onclick="filterFaq('videotron', this)"
+            class="category-btn px-6 py-2.5 rounded-full font-bold text-[11px] uppercase tracking-widest border border-gray-200 bg-white text-gray-500 transition"
+          >
+            Videotron
+          </button>
+          <button
+            onclick="filterFaq('ifp', this)"
+            class="category-btn px-6 py-2.5 rounded-full font-bold text-[11px] uppercase tracking-widest border border-gray-200 bg-white text-gray-500 transition"
+          >
+            Interactive Panel
+          </button>
+          <button
+            onclick="filterFaq('teknis', this)"
+            class="category-btn px-6 py-2.5 rounded-full font-bold text-[11px] uppercase tracking-widest border border-gray-200 bg-white text-gray-500 transition"
+          >
+            Teknis & Daya
+          </button>
+          <button
+            onclick="filterFaq('garansi', this)"
+            class="category-btn px-6 py-2.5 rounded-full font-bold text-[11px] uppercase tracking-widest border border-gray-200 bg-white text-gray-500 transition"
+          >
+            Garansi & Lokasi
+          </button>
+        </div>
+
+        <div id="faqContainer" class="grid grid-cols-1 gap-4"></div>
+
+        <div
+          id="emptyState"
+          class="hidden text-center py-20 bg-white rounded-3xl border-2 border-dashed border-gray-200"
+        >
+          <i class="fas fa-search text-gray-200 text-6xl mb-4"></i>
+          <p class="text-gray-500 font-bold uppercase text-xs tracking-widest">
+            Pertanyaan tidak ditemukan
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 py-20 text-white text-center">
+      <h3 class="font-black text-2xl mb-8 uppercase tracking-tighter">
+        Belum menemukan jawaban?
+      </h3>
+      <a
+        href="https://wa.me/6281387873874"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all hover:scale-105 inline-block shadow-xl shadow-blue-600/20"
+      >
+        Hubungi Tim Teknis HDe <i class="fab fa-whatsapp ml-2 text-lg"></i>
+      </a>
+    </footer>
+
+    <script>
+      const faqData = [
+        // VIDEOTRON
+        {
+          cat: "videotron",
+          q: "Apa perbedaan seri GEN-Z (Outdoor) dan GEN-Y (Indoor)?",
+          a: "Seri GEN-Z dirancang tahan cuaca (IP65) dengan kecerahan tinggi hingga 5000 nits. Seri GEN-Y dioptimalkan untuk jarak dekat dengan warna lebih halus dan kecerahan 450 nits agar nyaman di mata.",
+        },
+        {
+          cat: "videotron",
+          q: "Berapa IP Rating videotron outdoor HDe?",
+          a: "Seri outdoor seperti GEN-Z400 memiliki rating IP65 pada bagian depan (tahan hujan/debu) dan IP54 pada bagian belakang.",
+        },
+        {
+          cat: "videotron",
+          q: "Apakah tampilan videotron bergaris saat direkam kamera?",
+          a: "Tidak. Produk HDe memiliki Refresh Rate ≥ 3840 Hz, sehingga visual tetap mulus dan bebas flicker saat difoto atau masuk kamera TV.",
+        },
+        {
+          cat: "videotron",
+          q: "Apa itu Pixel Pitch P4 pada GEN-Z400?",
+          a: "Pixel Pitch 4mm adalah jarak antar lampu LED. P4 memberikan resolusi tajam untuk layar outdoor besar dengan jarak pandang ideal mulai 4 meter.",
+        },
+        {
+          cat: "videotron",
+          q: "Apa jenis LED yang digunakan pada seri GEN-Y40?",
+          a: "Menggunakan teknologi LED SMD2121 yang memberikan kerapatan warna tinggi untuk penggunaan dalam ruangan.",
+        },
+        {
+          cat: "videotron",
+          q: "Berapa sudut pandang (Viewing Angle) videotron HDe?",
+          a: "Sangat luas. Indoor mencapai H 160º / V 140º, dan Outdoor H 140º / V 120º.",
+        },
+        {
+          cat: "videotron",
+          q: "Apakah videotron HDe memiliki sertifikat TKDN?",
+          a: "Ya, videotron kami sudah tersertifikasi dengan nilai TKDN sebesar 40%.",
+        },
+        {
+          cat: "videotron",
+          q: "Berapa masa pakai (lifetime) lampu LED HDe?",
+          a: "Lampu LED kami dirancang untuk penggunaan jangka panjang dengan durabilitas hingga 100.000 jam operasional.",
+        },
+        {
+          cat: "videotron",
+          q: "Bahan kabinet apa yang digunakan GEN-Z400?",
+          a: "Menggunakan material Iron (Besi) yang kokoh untuk memastikan struktur tetap stabil di berbagai cuaca.",
+        },
+        {
+          cat: "videotron",
+          q: "Berapa berat kabinet videotron outdoor?",
+          a: "Rata-rata berat kabinet outdoor adalah 45 Kg per meter persegi.",
+        },
+
+        // IFP
+        {
+          cat: "ifp",
+          q: "Apa saja ukuran layar HDe IFP yang tersedia?",
+          a: "Tersedia pilihan ukuran 65, 75, 86, 98, hingga 110 inci untuk berbagai kebutuhan ruangan.",
+        },
+        {
+          cat: "ifp",
+          q: "Sistem Operasi apa yang digunakan HDe IFP?",
+          a: "Menggunakan Android 11 (upgradable hingga v14) dan mendukung opsional Windows PC melalui modul OPS.",
+        },
+        {
+          cat: "ifp",
+          q: "Apakah layar IFP mendukung resolusi 4K?",
+          a: "Ya, seluruh varian IFP HDe sudah mendukung resolusi 4K UHD (3840 x 2160).",
+        },
+        {
+          cat: "ifp",
+          q: "Berapa banyak titik sentuh yang didukung?",
+          a: "Mendukung hingga 40 titik sentuh (touch points) secara bersamaan, sangat ideal untuk kolaborasi kelompok.",
+        },
+        {
+          cat: "ifp",
+          q: "Apa itu teknologi Zero-Fit Lamination?",
+          a: "Teknologi ini menghilangkan celah antara panel dan kaca, sehingga menulis terasa natural dan sangat presisi tanpa jeda visual.",
+        },
+        {
+          cat: "ifp",
+          q: "Apakah IFP memiliki kamera untuk video conference?",
+          a: "Ya, tersedia opsi Smart Camera 4K (48M) dan 8 Array Microphone untuk kualitas meeting profesional.",
+        },
+        {
+          cat: "ifp",
+          q: "Apa spesifikasi kaca pelindung IFP?",
+          a: "Menggunakan 3.5mm Anti-Glare Tempered Glass yang kuat dan tidak memantulkan cahaya lampu ruangan.",
+        },
+        {
+          cat: "ifp",
+          q: "Berapa kapasitas memori standar IFP?",
+          a: "Tersedia konfigurasi RAM 4GB/32GB atau high-end 8GB/128GB.",
+        },
+        {
+          cat: "ifp",
+          q: "Apakah mendukung Screen Mirroring?",
+          a: "Ya, mendukung fitur ScreenShare untuk menampilkan layar HP, Tablet, atau Laptop secara wireless.",
+        },
+        {
+          cat: "ifp",
+          q: "Apakah tersedia Mobile Stand?",
+          a: "Ya, tersedia mobile stand yang mampu menahan beban hingga 300kg dengan roda yang dapat dikunci.",
+        },
+
+        // TEKNIS & DAYA
+        {
+          cat: "teknis",
+          q: "Berapa daya listrik maksimal Videotron Outdoor?",
+          a: "Konsumsi daya maksimal untuk seri outdoor adalah sekitar 1150 W per meter persegi.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa daya listrik maksimal Videotron Indoor?",
+          a: "Sangat efisien, hanya membutuhkan maksimal 200 W per meter persegi.",
+        },
+        {
+          cat: "teknis",
+          q: "Apa sistem pemeliharaan (maintenance) videotron HDe?",
+          a: "Mendukung Rear Access (akses belakang) untuk seri outdoor, memudahkan perbaikan tanpa membongkar layar depan.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa daya yang dibutuhkan IFP 86 inci?",
+          a: "Maksimum konsumsi daya sekitar 450W (standby < 0.5W).",
+        },
+        {
+          cat: "teknis",
+          q: "Apakah perlu menggunakan Stabilizer/UPS?",
+          a: "Kami sangat menyarankan penggunaan stabilizer untuk menjaga kestabilan tegangan listrik demi keawetan unit.",
+        },
+        {
+          cat: "teknis",
+          q: "Apa jenis lampu LED pada seri Outdoor?",
+          a: "Menggunakan jenis LED SMD1921 yang sangat terang dan tahan cuaca panas.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa tingkat kecerahan maksimal seri Outdoor?",
+          a: "Mencapai ≥ 5000 nits, tetap terlihat jelas meski di bawah terik matahari siang hari.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa temperatur operasional videotron?",
+          a: "Aman digunakan pada rentang suhu -20°C hingga 60°C.",
+        },
+        {
+          cat: "teknis",
+          q: "Bagaimana cara setting jadwal on/off otomatis?",
+          a: "Dapat diatur melalui software controller (NovaStar) yang sudah termasuk dalam paket instalasi.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa panjang kabel yang didapat dalam paket?",
+          a: "Paket standar sudah termasuk kabel power dan data maksimal 15 meter.",
+        },
+
+        // GARANSI & LOKASI
+        {
+          cat: "garansi",
+          q: "Berapa lama masa garansi produk HDe?",
+          a: "Seluruh produk HDe memiliki masa garansi resmi selama 1 tahun (parts & service).",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah teknisi bisa datang ke luar kota?",
+          a: "Ya, teknisi kami melayani kunjungan ke seluruh wilayah Indonesia untuk perbaikan di tempat.",
+        },
+        {
+          cat: "garansi",
+          q: "Di mana saja Service Center HDe berada?",
+          a: "Kami ada di Jakarta, Bandung, Surabaya, Medan, Makassar, Samarinda, hingga Ambon dan Ternate.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah harga sudah termasuk jasa instalasi?",
+          a: "Untuk paket tertentu (seperti GEN-Z400), harga sudah mencakup konstruksi, frame ACP, dan jasa pasang.",
+        },
+        {
+          cat: "garansi",
+          q: "Bagaimana prosedur klaim garansi?",
+          a: "Cukup isi form Tiket Bantuan di website ini dengan Serial Number unit Anda.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah HDe melayani pengiriman ke Papua?",
+          a: "Ya, kami melayani pengiriman dan instalasi ke seluruh pelosok Indonesia.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah ada biaya training operator?",
+          a: "Gratis. Setiap pembelian sudah termasuk sesi training penggunaan software bagi tim Anda.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah bisa beli unit kabinet saja?",
+          a: "Bisa. Kami melayani pembelian unit kabinet secara eceran maupun paket lengkap.",
+        },
+        {
+          cat: "garansi",
+          q: "Di mana saya bisa download brosur?",
+          a: "Brosur teknis tersedia di halaman produk atau hubungi admin via WhatsApp.",
+        },
+        {
+          cat: "garansi",
+          q: "Berapa nomor Technical Support HDe?",
+          a: "Hubungi tim ahli kami di +62 813 8787 3874.",
+        },
+
+        // TAMBAHAN OPERASIONAL
+        {
+          cat: "videotron",
+          q: "Apa itu Gray Scale 14-16 bit pada videotron?",
+          a: "Menghasilkan transisi warna yang sangat halus tanpa gradasi kasar (banding).",
+        },
+        {
+          cat: "ifp",
+          q: "Berapa berat unit IFP 110 inci?",
+          a: "Unit berukuran 110 inci memiliki berat sekitar 160 Kg.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa resolusi modul GEN-Z400?",
+          a: "Resolusi per modul adalah 80 x 40 pixel.",
+        },
+        {
+          cat: "teknis",
+          q: "Apa fungsi video processor pada videotron?",
+          a: "Mengolah berbagai input (HDMI, DP, Camera) agar pas dengan resolusi layar videotron.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah ada garansi untuk lampu LED yang mati satu titik?",
+          a: "Ya, kami memberikan dukungan penggantian modul jika terjadi kerusakan lampu sesuai syarat garansi.",
+        },
+        {
+          cat: "ifp",
+          q: "Apakah kamera IFP bisa mendeteksi suara?",
+          a: "Ya, fitur Auto-Framing pada kamera akan fokus pada orang yang sedang berbicara.",
+        },
+        {
+          cat: "teknis",
+          q: "Berapa konsumsi daya rata-rata (Average Power)?",
+          a: "Biasanya sekitar 30-40% dari konsumsi daya maksimal.",
+        },
+        {
+          cat: "videotron",
+          q: "Berapa jarak pandang ideal IFP 65 inci?",
+          a: "Sekitar 2-4 meter, cocok untuk ruang meeting kecil.",
+        },
+        {
+          cat: "garansi",
+          q: "Apakah HDe melayani jasa pemeliharaan setelah masa garansi habis?",
+          a: "Ya, kami menyediakan kontrak maintenance tahunan bagi pelanggan korporat.",
+        },
+        {
+          cat: "teknis",
+          q: "Apa merk controller yang digunakan HDe?",
+          a: "Kami menggunakan controller standar industri terbaik yaitu NovaStar.",
+        },
+      ];
+
+      function renderFaq(data) {
+        const container = document.getElementById("faqContainer");
+        container.innerHTML = data
+          .map(
+            (item, index) => `
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden" data-category="${item.cat}">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center group outline-none">
+                        <span class="font-bold text-gray-700 group-hover:text-blue-600 transition text-sm md:text-base">${item.q}</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center transition-all group-hover:bg-blue-50">
+                            <i class="fas fa-chevron-down text-[10px] text-gray-400 transition-transform duration-500"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-l-4 border-blue-500 ml-6 mb-4">
+                            ${item.a}
+                        </div>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector("i");
+        const isActive = answer.classList.contains("active");
+
+        document.querySelectorAll(".faq-answer").forEach((el) => {
+          el.style.maxHeight = null;
+          el.classList.remove("active");
+          el.previousElementSibling
+            .querySelector("i")
+            .classList.remove("rotate-icon");
+        });
+
+        if (!isActive) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          answer.classList.add("active");
+          icon.classList.add("rotate-icon");
+        }
+      }
+
+      function filterFaq(cat, btn) {
+        document
+          .querySelectorAll(".category-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filtered =
+          cat === "all" ? faqData : faqData.filter((i) => i.cat === cat);
+        renderFaq(filtered);
+        document
+          .getElementById("emptyState")
+          .classList.toggle("hidden", filtered.length > 0);
+      }
+
+      function searchFaq() {
+        const query = document.getElementById("faqSearch").value.toLowerCase();
+        const filtered = faqData.filter(
+          (i) =>
+            i.q.toLowerCase().includes(query) ||
+            i.a.toLowerCase().includes(query),
+        );
+        renderFaq(filtered);
+        document
+          .getElementById("emptyState")
+          .classList.toggle("hidden", filtered.length > 0);
+      }
+
+      // Initial Load
+      renderFaq(faqData);
+    </script>
+  </body>
+</html>

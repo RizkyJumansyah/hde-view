@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LED Videotron Solutions | HDe Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+
+      /* Animasi Shimmer & Particle */
+      @keyframes shimmer {
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      @keyframes particleFade {
+        0% {
+          transform: translate(0, 0) scale(0);
+          opacity: 0;
+        }
+        50% {
+          transform: translate(10px, 10px) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(20px, 20px) scale(0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <nav
+      id="main-navbar"
+      class="fixed top-0 left-0 w-full z-[100] bg-slate-950/90 backdrop-blur-xl border-b border-white/5 transition-all duration-500 transform translate-y-0"
+    >
+      <div
+        id="navbar-container"
+        class="container mx-auto px-6 py-1 flex justify-between items-center transition-all duration-500"
+      >
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="flex items-center group relative py-1">
+            <div
+              class="relative flex items-center justify-center min-w-[50px] md:min-w-[70px]"
+            >
+              <div
+                class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 group-hover:scale-[2.5] transition-transform duration-1000 opacity-0 group-hover:opacity-100"
+              ></div>
+
+              <img
+                src="img/HDe-2.png"
+                alt=""
+                class="absolute h-10 md:h-14 w-auto object-contain opacity-10 blur-[4px] transition-all duration-700 scale-[1.5] md:scale-[1.8] group-hover:scale-[2] group-hover:opacity-20 filter brightness-200"
+              />
+
+              <img
+                src="img/HDe-2.png"
+                alt="HDe Logo"
+                class="h-10 md:h-14 w-auto object-contain relative z-10 transition-all duration-500 scale-125 md:scale-150 group-hover:scale-110 filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+              />
+            </div>
+
+            <div
+              class="ml-8 md:ml-12 text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em] hidden md:block border-l border-white/10 pl-4 leading-tight"
+            >
+              Layanan Spesifikasi<br /><span class="text-blue-400 font-black"
+                >Videotron LED</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="group flex items-center gap-3 bg-white/5 hover:bg-blue-500/10 px-5 py-2.5 rounded-full transition-all duration-300 border border-white/10 hover:border-blue-500/30 shadow-lg shadow-black/20"
+          >
+            <span
+              class="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-red-400 transition-colors"
+              >Kembali</span
+            >
+            <div
+              class="w-5 h-5 rounded-full bg-white/10 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-red-400 group-hover:rotate-90 transition-all duration-500"
+            >
+              <i class="fas fa-times text-sm"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="h-0 md:h-0"></div>
+
+    <section class="py-32 gradient-bg text-white overflow-hidden">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+      >
+        <div class="relative">
+          <div
+            class="h-[300px] md:h-[450px] w-full rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl relative z-10 bg-slate-900"
+          >
+            <img
+              src="img/Produk/Vid/vidd1.png"
+              alt="Videotron LED"
+              class="w-full h-full object-cover scale-105 hover:scale-100 transition duration-1000"
+            />
+          </div>
+
+          <div
+            class="absolute -z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/20 blur-[120px] rounded-full"
+          ></div>
+        </div>
+        <div>
+          <span
+            class="inline-block border border-blue-400 text-blue-400 px-4 py-1 rounded-md text-[10px] font-bold uppercase tracking-[0.2em] mb-6"
+            >Visual Excellence</span
+          >
+          <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+            LED Videotron <br /><span class="text-blue-400"
+              >Indoor & Outdoor</span
+            >
+          </h1>
+          <p class="text-gray-400 text-lg mb-10 leading-relaxed font-light">
+            Hadirkan visual tanpa batas dengan modul LED presisi tinggi.
+            Sempurna untuk periklanan digital, <b>Command Center</b>, hingga
+            <b>Ballroom</b>.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 items-center">
+            <a
+              href="#comparison"
+              class="group relative px-10 py-5 bg-blue-600 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(37,99,235,0.3)] flex items-center gap-3 w-full sm:w-auto justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"
+              ></div>
+              <i class="fas fa-microchip text-lg"></i>
+
+              <span class="font-black uppercase tracking-widest text-sm"
+                >Smart Configurator</span
+              >
+              <i
+                class="fas fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"
+              ></i>
+            </a>
+            <!-- <a
+              href="#comparison"
+              class="group px-10 py-5 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white hover:text-slate-900 flex items-center gap-3 w-full sm:w-auto justify-center font-bold uppercase tracking-widest text-xs"
+            >
+              Smart Configurator
+              <i
+                class="fas fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"
+              ></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="text-blue-600 font-bold text-[10px] uppercase tracking-[0.2em] mb-4 block"
+            >Selection Tool & Calculator</span
+          >
+          <h2 class="text-4xl font-black mb-4 tracking-tight">
+            Konfigurasi Videotron Anda
+          </h2>
+        </div>
+
+        <div
+          class="max-w-6xl mx-auto bg-white rounded-[3rem] shadow-xl p-8 md:p-12 border border-gray-100"
+        >
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-8">
+              <div>
+                <label
+                  class="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider"
+                  >1. Lokasi Pemasangan:</label
+                >
+                <div class="flex p-1 bg-slate-100 rounded-2xl w-full">
+                  <button
+                    id="btnIndoor"
+                    onclick="updateUI('Indoor')"
+                    class="flex-1 py-3 rounded-xl font-bold text-sm transition-all bg-white shadow-sm text-blue-600"
+                  >
+                    Indoor
+                  </button>
+                  <button
+                    id="btnOutdoor"
+                    onclick="updateUI('Outdoor')"
+                    class="flex-1 py-3 rounded-xl font-bold text-sm transition-all text-slate-500"
+                  >
+                    Outdoor
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider"
+                  >2. Jarak Pandang Audiens:</label
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="30"
+                  step="1"
+                  value="3"
+                  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  id="distRange"
+                  oninput="updateUI()"
+                />
+                <div class="flex justify-between mt-2">
+                  <span class="text-2xl font-black text-slate-800"
+                    ><span id="distVal">3</span>
+                    <small class="text-xs font-normal text-slate-400 uppercase"
+                      >Meter</small
+                    ></span
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider"
+                  >3. Estimasi Ukuran Target (Meter):</label
+                >
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="space-y-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase"
+                      >Lebar Target</span
+                    >
+                    <input
+                      type="number"
+                      id="inpWidth"
+                      value="4"
+                      oninput="updateUI()"
+                      class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-500 outline-none transition"
+                    />
+                  </div>
+                  <div class="space-y-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase"
+                      >Tinggi Target</span
+                    >
+                    <input
+                      type="number"
+                      id="inpHeight"
+                      value="3"
+                      oninput="updateUI()"
+                      class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-500 outline-none transition"
+                    />
+                  </div>
+                </div>
+                <p class="mt-4 text-[10px] text-slate-400 italic">
+                  *Sistem akan otomatis menyesuaikan ke kelipatan modul kabinet
+                  terdekat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 rounded-[2.5rem] p-10 text-white relative shadow-2xl shadow-blue-900/20 overflow-hidden group/card"
+            >
+              <div
+                id="tkdnBadge"
+                class="absolute top-6 right-6 bg-emerald-500 text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest hidden animate-bounce z-20"
+              >
+                TKDN
+              </div>
+
+              <span
+                class="text-blue-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block text-center"
+                >Rekomendasi Spesifikasi</span
+              >
+              <h3
+                id="resTitle"
+                class="text-4xl font-black mb-8 text-center uppercase tracking-tight text-white text-wrap"
+              >
+                GEN-Y40
+              </h3>
+
+              <div class="grid grid-cols-2 gap-4 relative z-10">
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    Pixel Pitch
+                  </p>
+                  <p id="valPitch" class="text-md font-bold text-blue-400">
+                    4.0 mm
+                  </p>
+                </div>
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    Refresh Rate
+                  </p>
+                  <p id="valRefresh" class="text-md font-bold text-white">
+                    3840 Hz
+                  </p>
+                </div>
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    Total Weight
+                  </p>
+                  <p id="valWeight" class="text-md font-bold text-white">-</p>
+                </div>
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    IP Rating
+                  </p>
+                  <p id="valIP" class="text-md font-bold text-white">-</p>
+                </div>
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    Max Brightness
+                  </p>
+                  <p id="valBrightness" class="text-md font-bold text-white">
+                    -
+                  </p>
+                </div>
+                <div
+                  class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center"
+                >
+                  <p class="text-[9px] uppercase text-slate-500 mb-1">
+                    Viewing Angle
+                  </p>
+                  <p id="valViewAngle" class="text-[10px] font-bold text-white">
+                    -
+                  </p>
+                </div>
+
+                <div
+                  class="p-6 bg-blue-600/10 rounded-3xl border border-blue-500/20 col-span-2 space-y-4"
+                >
+                  <div
+                    class="flex justify-between items-center border-b border-white/5 pb-2"
+                  >
+                    <div class="space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Cabinet Configurations
+                      </p>
+                      <p id="valConfig" class="text-xs font-bold text-white">
+                        0 x 0 (W x H)
+                      </p>
+                    </div>
+                    <div class="text-right space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Total Cabinets
+                      </p>
+                      <p
+                        id="valTotalCab"
+                        class="text-xs font-bold text-blue-400"
+                      >
+                        0 Units
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center border-b border-white/5 pb-2"
+                  >
+                    <div class="space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Real Screen Size (m)
+                      </p>
+                      <p
+                        id="valRealSize"
+                        class="text-xs font-bold text-white text-wrap"
+                      >
+                        0 x 0 m
+                      </p>
+                    </div>
+                    <div class="text-right space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Total Resolution (px)
+                      </p>
+                      <p
+                        id="valTotalRes"
+                        class="text-[10px] font-bold text-white"
+                      >
+                        0 x 0 px
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-center border-b border-white/5 pb-2"
+                  >
+                    <div class="space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Maintenance
+                      </p>
+                      <p id="valMaint" class="text-[10px] font-bold text-white">
+                        -
+                      </p>
+                    </div>
+                    <div class="text-right space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Inclusions
+                      </p>
+                      <p
+                        id="valInclusions"
+                        class="text-[9px] font-bold text-blue-400 italic"
+                      >
+                        Standard
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between items-center pt-1">
+                    <div class="space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Total Luas Real
+                      </p>
+                      <p class="text-xs font-bold text-white">
+                        <span id="valTotalArea">0</span> m²
+                      </p>
+                    </div>
+                    <div class="text-right space-y-1">
+                      <p class="text-[9px] uppercase text-slate-500">
+                        Max Power Req.
+                      </p>
+                      <p class="text-xs font-bold text-emerald-400">
+                        <span id="valTotalWatt">0</span> Watt
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col gap-4 mt-8 relative z-10"
+                data-html2canvas-ignore="true"
+              >
+                <button
+                  onclick="sendWA()"
+                  class="relative group w-full bg-blue-600 text-white py-4 px-4 rounded-2xl font-black uppercase tracking-[0.2em] text-xs hover:bg-blue-700 transition-all shadow-xl overflow-hidden"
+                >
+                  <div
+                    class="flex items-center justify-center gap-3 relative z-10"
+                  >
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Dapatkan RAB Spesifik</span>
+                  </div>
+                </button>
+
+                <!-- <button
+                  onclick="downloadPDF()"
+                  class="w-full bg-transparent border border-white/20 text-white/70 py-3 px-4 rounded-2xl font-bold uppercase tracking-[0.1em] text-[10px] hover:bg-white/10 transition-all"
+                >
+                  <div class="flex items-center justify-center gap-2">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Simpan Spesifikasi (PDF)</span>
+                  </div>
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 mb-5">
+      <div
+        class="bg-slate-900 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 border border-white/5 shadow-2xl relative z-20"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex items-center gap-6 w-full md:w-auto">
+            <div
+              class="w-14 h-14 bg-blue-600/20 text-blue-400 rounded-2xl flex-shrink-0 flex items-center justify-center border border-blue-500/30 shadow-inner"
+            >
+              <i class="fas fa-tools text-xl"></i>
+            </div>
+            <div>
+              <span
+                class="text-[9px] font-bold text-blue-400 uppercase tracking-[0.2em] block mb-1"
+              >
+                Layanan Khusus
+              </span>
+              <span
+                class="text-sm md:text-base font-black text-white uppercase flex items-center gap-3"
+              >
+                On-Site Service
+                <span
+                  class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"
+                ></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="w-full md:w-auto flex justify-start md:justify-end">
+            <span
+              class="text-[11px] font-black text-emerald-400 bg-emerald-400/10 px-5 py-2.5 rounded-xl border border-emerald-400/20 tracking-wider"
+            >
+              TKDN + BMP 40.25%
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-gradient-to-r from-blue-900 to-slate-900 rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden shadow-2xl"
+        >
+          <div
+            class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10"
+          >
+            <div class="text-center md:text-left">
+              <span
+                class="inline-block bg-blue-500/20 text-blue-300 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 border border-blue-500/30"
+                >Support Center</span
+              >
+              <h2 class="text-3xl md:text-4xl font-black mb-4">
+                Butuh Panduan Teknis?
+              </h2>
+              <p class="text-gray-400 max-w-md text-sm">
+                Pelajari cara maintenance mandiri dan tutorial setting di pusat
+                panduan kami.
+              </p>
+            </div>
+            <a
+              href="videotron-guide.html"
+              class="bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold hover:bg-blue-50 transition shadow-xl flex items-center gap-3 group"
+            >
+              <i class="fas fa-book-open text-blue-600"></i> Buka Panduan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-50 text-center py-12 border-t border-gray-100">
+      <p class="text-gray-400 text-[10px] uppercase tracking-widest">
+        &copy; 2026 HDe Technology. All Rights Reserved.
+      </p>
+    </footer>
+    <script>
+      let activeMode = "Indoor";
+
+      function updateUI(mode) {
+        if (mode) {
+          activeMode = mode;
+          // Update styling tombol toggle
+          const isIndoor = mode === "Indoor";
+          document.getElementById("btnIndoor").className = isIndoor
+            ? "flex-1 py-3 rounded-xl font-bold text-sm transition-all bg-white shadow-sm text-blue-600"
+            : "flex-1 py-3 rounded-xl font-bold text-sm transition-all text-slate-500";
+          document.getElementById("btnOutdoor").className = !isIndoor
+            ? "flex-1 py-3 rounded-xl font-bold text-sm transition-all bg-white shadow-sm text-blue-600"
+            : "flex-1 py-3 rounded-xl font-bold text-sm transition-all text-slate-500";
+
+          // Sesuaikan range jarak pandang jika perlu
+          const range = document.getElementById("distRange");
+          if (isIndoor) {
+            range.max = "10";
+          } else {
+            range.max = "30";
+          }
+        }
+
+        const dist = parseInt(document.getElementById("distRange").value);
+        const qtyW = parseInt(document.getElementById("inpWidth").value) || 0;
+        const qtyH = parseInt(document.getElementById("inpHeight").value) || 0;
+
+        document.getElementById("distVal").innerText = dist;
+
+        // Database berdasarkan Formula Excel
+        let spec = {
+          model: "",
+          pitch: "",
+          led: "",
+          resW: 0,
+          resH: 0,
+          wattBase: 0,
+          cabW: 0,
+          cabH: 0,
+          powerMode: "",
+          // --- PROPERTI BARU ---
+          weightBase: 0,
+          ipRating: "",
+          maint: "",
+          inclusions: "",
+        };
+
+        if (activeMode === "Indoor") {
+          spec.cabW = 0.64;
+          spec.cabH = 0.48;
+          spec.brightness = "≥ 450 nits";
+          spec.viewAngle = "H 160º ; V 140º";
+          // --- DATA BARU INDOOR ---
+          spec.ipRating = "IP20";
+          spec.maint = "Front Access";
+          spec.weightBase = 0; // Indoor tidak dihitung berat m2 di excel
+          spec.inclusions = "Instalasi";
+
+          if (dist <= 2.5) {
+            spec = {
+              ...spec,
+              model: "GEN-Y12",
+              pitch: "1.25 mm",
+              resW: 512,
+              resH: 384,
+              wattBase: 500,
+              powerMode: "area",
+            };
+          } else if (dist <= 3.5) {
+            spec = {
+              ...spec,
+              model: "GEN-Y15",
+              pitch: "1.5 mm",
+              resW: 416,
+              resH: 312,
+              wattBase: 500,
+              powerMode: "area",
+            };
+          } else if (dist <= 4.5) {
+            spec = {
+              ...spec,
+              model: "GEN-Y18",
+              pitch: "1.86 mm",
+              resW: 344,
+              resH: 258,
+              wattBase: 470,
+              powerMode: "area",
+            };
+          } else if (dist <= 6) {
+            spec = {
+              ...spec,
+              model: "GEN-Y25",
+              pitch: "2.5 mm",
+              resW: 256,
+              resH: 192,
+              wattBase: 385,
+              powerMode: "area",
+            };
+          } else {
+            spec = {
+              ...spec,
+              model: "GEN-Y40",
+              pitch: "4.0 mm",
+              resW: 160,
+              resH: 120,
+              wattBase: 200,
+              powerMode: "unit",
+            };
+          }
+        } else {
+          // SEKSI OUTDOOR (Kabinet 960x960)
+          spec.cabW = 0.96;
+          spec.cabH = 0.96;
+          spec.brightness = "5000 nits";
+          spec.viewAngle = "H 140º ; V 120º";
+          // --- DATA BARU OUTDOOR ---
+          spec.ipRating = "IP65 / IP54";
+          spec.maint = "Rear Access";
+          spec.weightBase = 45; // 45kg/m2
+          spec.inclusions = "Instalasi";
+
+          if (dist <= 8) {
+            spec = {
+              ...spec,
+              model: "GEN-Z400",
+              pitch: "4 mm",
+              led: "SMD1921",
+              resW: 240,
+              resH: 240,
+              wattBase: 1150,
+              powerMode: "area_roundup",
+            };
+          } else if (dist <= 12) {
+            spec = {
+              ...spec,
+              model: "GEN-Z500",
+              pitch: "5 mm",
+              led: "SMD1921",
+              resW: 192,
+              resH: 192,
+              wattBase: 1150,
+              powerMode: "unit",
+              inclusions: "Instalasi",
+            };
+          } else if (dist <= 20) {
+            spec = {
+              ...spec,
+              model: "GEN-Z800",
+              pitch: "8 mm",
+              led: "SMD3535",
+              resW: 120,
+              resH: 120,
+              wattBase: 1000,
+              powerMode: "area",
+            };
+          } else {
+            spec = {
+              ...spec,
+              model: "GEN-Z1000",
+              pitch: "10 mm",
+              led: "SMD3535",
+              resW: 96,
+              resH: 96,
+              wattBase: 1000,
+              powerMode: "unit",
+            };
+          }
+        }
+
+        const totalCabinets = qtyW * qtyH;
+        const realWidth = qtyW * spec.cabW;
+        const realHeight = qtyH * spec.cabH;
+        const totalArea = realWidth * realHeight;
+        const totalResW = qtyW * spec.resW;
+        const totalResH = qtyH * spec.resH;
+        const totalPixels = totalResW * totalResH;
+
+        let totalPower = 0;
+        if (spec.powerMode === "unit") {
+          totalPower = spec.wattBase * totalCabinets;
+        } else if (spec.powerMode === "area_roundup") {
+          totalPower = Math.ceil((spec.wattBase * totalArea) / 1000) * 1000;
+        } else {
+          totalPower = spec.wattBase * totalArea;
+        }
+
+        // UPDATE DISPLAY UTAMA
+        document.getElementById("resTitle").innerText = spec.model;
+        document.getElementById("valPitch").innerText = spec.pitch + "";
+        document.getElementById(
+          "valConfig"
+        ).innerText = `${qtyW} x ${qtyH} (W x H)`;
+        document.getElementById(
+          "valTotalCab"
+        ).innerText = `${totalCabinets} Units`;
+        document.getElementById("valRealSize").innerText = `${realWidth.toFixed(
+          2
+        )} x ${realHeight.toFixed(2)} m`;
+        document.getElementById(
+          "valTotalRes"
+        ).innerText = `${totalPixels.toLocaleString(
+          "id-ID"
+        )} (${totalResW} x ${totalResH} px)`;
+        document.getElementById("valTotalArea").innerText =
+          totalArea.toFixed(2);
+        document.getElementById("valTotalWatt").innerText =
+          Math.round(totalPower).toLocaleString("id-ID");
+        document.getElementById("valRefresh").innerText = "3840 Hz";
+        document.getElementById("valBrightness").innerText = spec.brightness;
+        document.getElementById("valViewAngle").innerText = spec.viewAngle;
+
+        // --- UPDATE DISPLAY UNTUK KOLOM BARU ---
+        const totalWeight =
+          spec.weightBase > 0 ? Math.round(spec.weightBase * totalArea) : "-";
+        document.getElementById("valWeight").innerText =
+          totalWeight + (totalWeight !== "-" ? " Kg" : "");
+        document.getElementById("valIP").innerText = spec.ipRating;
+        document.getElementById("valMaint").innerText = spec.maint;
+        document.getElementById("valInclusions").innerText = spec.inclusions;
+
+        const badge = document.getElementById("tkdnBadge");
+        badge.classList.remove("hidden");
+      }
+
+      updateUI("Indoor");
+    </script>
+
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.getElementById("main-navbar");
+      const scrollThreshold = 100; // Navbar baru akan bereaksi setelah scroll 100px
+
+      window.addEventListener("scroll", function () {
+        let currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        // Menghindari nilai negatif di beberapa browser (seperti iOS)
+        if (currentScroll < 0) currentScroll = 0;
+
+        if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+          // SCROLL DOWN: Sembunyikan Navbar
+          navbar.style.transform = "translateY(-100%)";
+          navbar.style.opacity = "0";
+        } else {
+          // SCROLL UP: Munculkan Navbar
+          navbar.style.transform = "translateY(0)";
+          navbar.style.opacity = "1";
+
+          // Tambahkan shadow lebih kuat saat melayang (bukan di posisi paling atas)
+          if (currentScroll > 50) {
+            navbar.classList.add("shadow-xl");
+            navbar.classList.replace("bg-white/95", "bg-blue"); // Buat lebih solid saat melayang
+          } else {
+            navbar.classList.remove("shadow-xl");
+            navbar.classList.replace("bg-white", "bg-white/95");
+          }
+        }
+
+        lastScrollTop = currentScroll;
+      });
+    </script>
+    <script>
+      function sendWA() {
+        const model = document.getElementById("resTitle").innerText;
+        const pitch = document.getElementById("valPitch").innerText;
+        const config = document.getElementById("valConfig").innerText;
+        const totalCab = document.getElementById("valTotalCab").innerText;
+        const realSize = document.getElementById("valRealSize").innerText;
+        const totalRes = document.getElementById("valTotalRes").innerText;
+        const totalWatt = document.getElementById("valTotalWatt").innerText;
+        const inclusions = document.getElementById("valInclusions").innerText;
+        const targetW = document.getElementById("inpWidth").value;
+        const targetH = document.getElementById("inpHeight").value;
+
+        const phoneNumber = "6281234567890"; // GANTI DENGAN NOMOR ANDA
+        const message = `Halo Admin HDe LED, saya ingin konsultasi penawaran videotron:
+
+*DETAIL KEBUTUHAN:*
+- Lokasi: ${activeMode}
+- Target Ukuran: ${targetW} x ${targetH} Meter
+
+*REKOMENDASI SISTEM:*
+- Model: *${model}*
+- Pixel Pitch: ${pitch}
+- Konfigurasi: ${config} (${totalCab})
+- Ukuran Real: ${realSize}
+- Resolusi: ${totalRes}
+- Listrik: ±${totalWatt} Watt
+- Termasuk: ${inclusions}
+
+Mohon bantuannya untuk informasi lebih lanjut. Terima kasih.`;
+
+        const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(waUrl, "_blank");
+      }
+
+      // function downloadPDF() {
+      //   // Memberitahu user bahwa fitur sedang menyiapkan dokumen
+      //   alert(
+      //     "Menyiapkan dokumen PDF... \n(Fitur ini memerlukan library jspdf untuk hasil maksimal)"
+      //   );
+
+      //   // Cara sederhana menggunakan print window
+      //   window.print();
+      // }
+    </script>
+  </body>
+</html>

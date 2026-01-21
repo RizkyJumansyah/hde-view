@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Support | HDe Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .gradient-gold {
+        background: linear-gradient(
+          135deg,
+          #bf953f,
+          #fcf6ba,
+          #b38728,
+          #fbf5b7,
+          #aa771c
+        );
+      }
+      .card-vid {
+        border: 1px solid rgba(191, 149, 63, 0.1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-vid:hover {
+        border-color: #bf953f;
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px -15px rgba(191, 149, 63, 0.15);
+      }
+      .nav-glass {
+        background: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900">
+    <nav
+      id="main-navbar"
+      class="bg-slate-950/90 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/5 transition-all duration-500 transform translate-y-0"
+    >
+      <div
+        id="navbar-container"
+        class="container mx-auto px-6 py-2 flex justify-between items-center transition-all duration-500"
+      >
+        <a href="index.html" class="flex items-center group relative py-1">
+          <div
+            class="relative flex items-center justify-center min-w-[50px] md:min-w-[70px]"
+          >
+            <div
+              class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 group-hover:scale-[2.5] transition-transform duration-1000 opacity-0 group-hover:opacity-100"
+            ></div>
+
+            <img
+              src="img/HDe-2.png"
+              alt=""
+              class="absolute h-10 md:h-12 w-auto object-contain opacity-10 blur-[4px] transition-all duration-700 scale-[1.5] md:scale-[1.8] group-hover:scale-[2] group-hover:opacity-20 filter brightness-200"
+            />
+
+            <img
+              src="img/HDe-2.png"
+              alt="HDe Logo"
+              class="h-10 md:h-12 w-auto object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] scale-125 md:scale-150"
+            />
+          </div>
+
+          <div
+            class="ml-8 md:ml-12 text-[10px] font-bold text-slate-300 uppercase tracking-[0.3em] hidden md:block border-l border-white/10 pl-4 leading-tight"
+          >
+            Official<br /><span class="text-blue-400 font-black">HDe LED</span>
+          </div>
+        </a>
+
+        <a
+          href="produk-videotron.html"
+          class="group flex items-center gap-3 bg-white/5 hover:bg-blue-500/10 px-5 py-2.5 rounded-full transition-all duration-300 border border-white/10 hover:border-blue-500/30 shadow-lg shadow-black/20"
+        >
+          <span
+            class="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-red-400 transition-colors"
+            >Kembali</span
+          >
+          <div
+            class="w-5 h-5 rounded-full bg-white/10 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-red-400 group-hover:rotate-90 transition-all duration-500"
+          >
+            <i class="fas fa-times text-sm"></i>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <header
+      class="bg-slate-950 pt-40 pb-24 relative overflow-hidden text-center text-white"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
+        ></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div
+          class="inline-block px-4 py-2 border border-yellow-500/50 text-yellow-500 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-6"
+        >
+          Support & Maintenance Hub
+        </div>
+        <h1 class="text-4xl md:text-7xl font-black mb-6 tracking-tighter">
+          Pusat Panduan <br /><span class="text-yellow-500">Videotron HDe</span>
+        </h1>
+        <p
+          class="text-slate-400 max-w-2xl mx-auto text-lg font-light leading-relaxed"
+        >
+          Instruksi teknis pengoperasian LED Display, mulai dari konfigurasi
+          hardware hingga manajemen sistem kontrol NovaStar.
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 -mt-32 relative z-20"
+      >
+        <a
+          href="#hardware"
+          class="card-vid p-10 rounded-[3rem] bg-white group shadow-xl"
+        >
+          <div
+            class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-amber-600 group-hover:text-white transition-all"
+          >
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-4 uppercase tracking-tight">
+            Anatomi Unit
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Mengenal modul LED, receiving card, dan sistem kelistrikan cabinet.
+          </p>
+          <span
+            class="text-amber-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2"
+            >Detail Komponen <i class="fas fa-arrow-right"></i
+          ></span>
+        </a>
+
+        <a
+          href="#control"
+          class="card-vid p-10 rounded-[3rem] bg-white group shadow-xl"
+        >
+          <div
+            class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all"
+          >
+            <i class="fas fa-sliders-h"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-4 uppercase tracking-tight">
+            Software Guide
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Konfigurasi NovaLCT, ViPlex, dan manajemen konten via Cloud Sync.
+          </p>
+          <span
+            class="text-blue-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2"
+            >Setting Langkah <i class="fas fa-arrow-right"></i
+          ></span>
+        </a>
+
+        <a
+          href="#maintenance"
+          class="card-vid p-10 rounded-[3rem] bg-white group shadow-xl"
+        >
+          <div
+            class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all"
+          >
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-xl font-extrabold mb-4 uppercase tracking-tight">
+            Perawatan
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Prosedur Front-Service, penggantian sparepart, dan kalibrasi warna.
+          </p>
+          <span
+            class="text-emerald-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2"
+            >SOP Teknisi <i class="fas fa-arrow-right"></i
+          ></span>
+        </a>
+      </div>
+
+      <section id="hardware" class="py-24 border-t border-slate-100 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-5/12">
+              <h4
+                class="text-orange-600 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+              >
+                01. Hardware Anatomy
+              </h4>
+              <h2
+                class="text-4xl font-black mb-8 tracking-tighter text-slate-900 leading-tight"
+              >
+                Sistem Distribusi <br /><span class="text-slate-400"
+                  >Data & Daya</span
+                >
+              </h2>
+              <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                Berbeda dengan monitor biasa, Videotron bekerja dengan sistem
+                distribusi modular. Signal gambar dipecah dan dikirimkan secara
+                sinkron ke ribuan lampu LED melalui rangkaian komponen berikut:
+              </p>
+
+              <div class="space-y-4">
+                <div
+                  class="group flex gap-5 p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all"
+                >
+                  <div
+                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-orange-600 group-hover:text-white transition-colors"
+                  >
+                    <i class="fas fa-microchip"></i>
+                  </div>
+                  <div class="flex-1">
+                    <span class="font-bold block text-slate-900 text-sm mb-1"
+                      >Receiving Card (MRV Series)</span
+                    >
+                    <p class="text-[12px] text-slate-500 leading-relaxed">
+                      Terletak di setiap kabinet untuk menerima paket data dari
+                      Sending Box dan menerjemahkannya ke modul LED.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="group flex gap-5 p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all"
+                >
+                  <div
+                    class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-orange-600 group-hover:text-white transition-colors"
+                  >
+                    <i class="fas fa-bolt"></i>
+                  </div>
+                  <div class="flex-1">
+                    <span class="font-bold block text-slate-900 text-sm mb-1"
+                      >Power Supply Unit (PSU)</span
+                    >
+                    <p class="text-[12px] text-slate-500 leading-relaxed">
+                      Mengonversi arus AC ke DC 5V. Kami menggunakan PSU
+                      high-efficiency untuk menjaga suhu kabinet tetap stabil.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:w-7/12 w-full grid grid-cols-2 gap-4">
+              <div
+                class="bg-slate-100 aspect-square md:aspect-video rounded-[2rem] flex flex-col items-center justify-center text-slate-400 border border-slate-200"
+              >
+                <i
+                  class="fas fa-network-wired text-3xl mb-3 text-slate-300"
+                ></i>
+                <span
+                  class="text-[10px] font-bold uppercase tracking-widest text-center px-4"
+                  >LAN Cat6 Distribution</span
+                >
+              </div>
+
+              <div
+                class="bg-slate-900 aspect-square md:aspect-video rounded-[2rem] flex flex-col items-center justify-center text-slate-500 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-20 bg-[radial-gradient(#444_1px,transparent_1px)] [background-size:16px_16px]"
+                ></div>
+                <div class="flex gap-2 mb-3">
+                  <div
+                    class="w-2 h-2 rounded-full bg-orange-500 animate-ping"
+                  ></div>
+                  <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                </div>
+                <span class="italic text-xs font-medium"
+                  >Daisy Chain Connection</span
+                >
+              </div>
+
+              <div
+                class="col-span-2 bg-slate-50 p-10 rounded-[3rem] border border-dashed border-slate-300 flex flex-col items-center justify-center"
+              >
+                <p
+                  class="text-[10px] font-black uppercase text-slate-400 mb-8 tracking-[0.3em]"
+                >
+                  Signal Flow Diagram
+                </p>
+
+                <div
+                  class="flex flex-wrap items-center justify-center gap-6 md:gap-10"
+                >
+                  <div class="text-center">
+                    <div
+                      class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center mb-2 mx-auto"
+                    >
+                      <i class="fas fa-laptop text-slate-700"></i>
+                    </div>
+                    <span class="text-[9px] font-bold uppercase"
+                      >Video Source</span
+                    >
+                  </div>
+
+                  <i
+                    class="fas fa-chevron-right text-slate-300 hidden md:block"
+                  ></i>
+
+                  <div class="text-center">
+                    <div
+                      class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-200 flex items-center justify-center mb-2 mx-auto"
+                    >
+                      <i class="fas fa-box text-orange-600"></i>
+                    </div>
+                    <span class="text-[9px] font-bold uppercase"
+                      >Sending Box</span
+                    >
+                  </div>
+
+                  <i
+                    class="fas fa-chevron-right text-slate-300 hidden md:block"
+                  ></i>
+
+                  <div class="flex gap-2">
+                    <div
+                      class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center border-b-4 border-orange-600"
+                    >
+                      <div class="grid grid-cols-2 gap-1">
+                        <div class="w-2 h-2 bg-slate-600 rounded-full"></div>
+                        <div class="w-2 h-2 bg-slate-600 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center border-b-4 border-orange-600"
+                    >
+                      <i class="fas fa-th text-slate-600 text-xs"></i>
+                    </div>
+                  </div>
+                  <span
+                    class="text-[9px] font-bold uppercase block md:inline w-full md:w-auto text-center"
+                    >LED Cabinets</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="control"
+        class="py-24 bg-slate-950 rounded-[4rem] text-white px-6 md:px-20 overflow-hidden relative mx-4"
+      >
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 blur-[120px]"
+        ></div>
+        <div
+          class="container mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10"
+        >
+          <div class="lg:w-1/2">
+            <h4
+              class="text-blue-400 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+            >
+              02. Control Ecosystem
+            </h4>
+            <h2 class="text-4xl font-black mb-8 leading-tight">
+              Setup NovaLCT <br />& Screen Mapping
+            </h2>
+
+            <div class="space-y-6 mb-10">
+              <div class="flex gap-4 items-start">
+                <span
+                  class="w-6 h-6 rounded-full bg-blue-600 flex-none flex items-center justify-center text-[10px] font-bold"
+                  >1</span
+                >
+                <p class="text-sm text-slate-400">
+                  <span class="text-white font-bold">Advanced Login:</span>
+                  Akses admin NovaLCT untuk konfigurasi parameter hardware inti.
+                </p>
+              </div>
+              <div class="flex gap-4 items-start">
+                <span
+                  class="w-6 h-6 rounded-full bg-blue-600 flex-none flex items-center justify-center text-[10px] font-bold"
+                  >2</span
+                >
+                <p class="text-sm text-slate-400">
+                  <span class="text-white font-bold">Screen Connection:</span>
+                  Pemetaan logis posisi kabinet agar gambar tersusun sempurna.
+                </p>
+              </div>
+              <div class="flex gap-4 items-start">
+                <span
+                  class="w-6 h-6 rounded-full bg-blue-600 flex-none flex items-center justify-center text-[10px] font-bold"
+                  >3</span
+                >
+                <p class="text-sm text-slate-400">
+                  <span class="text-white font-bold">Save to HW:</span>
+                  Penguncian data ke memori internal agar setting tidak hilang
+                  saat mati lampu.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                class="p-6 bg-white/5 rounded-2xl border border-white/10 group hover:border-blue-500/50 transition-colors"
+              >
+                <i class="fas fa-expand text-blue-400 mb-4"></i>
+                <h5 class="font-bold text-sm mb-2 uppercase">Resolution Set</h5>
+                <p class="text-[11px] text-slate-500">
+                  Input pixel pitch spesifik per kabinet (misal: 128x128px atau
+                  192x192px).
+                </p>
+              </div>
+              <div
+                class="p-6 bg-white/5 rounded-2xl border border-white/10 group hover:border-purple-500/50 transition-colors"
+              >
+                <i class="fas fa-cloud-upload-alt text-purple-400 mb-4"></i>
+                <h5 class="font-bold text-sm mb-2 uppercase">Cloud ViPlex</h5>
+                <p class="text-[11px] text-slate-500">
+                  Kelola konten dan jadwal tayang dari mana saja melalui
+                  dashboard berbasis web.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="lg:w-1/2 w-full bg-slate-900 p-8 rounded-[3rem] border border-white/10 shadow-2xl"
+          >
+            <div class="flex gap-1.5 mb-6">
+              <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
+            </div>
+            <div class="grid grid-cols-4 gap-2 opacity-80">
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                1
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                2
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                3
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                4
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                8
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                7
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                6
+              </div>
+              <div
+                class="aspect-square bg-blue-600/20 border border-blue-500/40 rounded-lg flex items-center justify-center text-blue-400 font-mono text-xs"
+              >
+                5
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-white/5 text-center">
+              <p
+                class="text-[10px] font-mono text-blue-500 uppercase tracking-widest"
+              >
+                NovaLCT Screen Mapping View
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="maintenance" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto mb-20">
+            <h4
+              class="text-emerald-600 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+            >
+              03. Maintenance SOP
+            </h4>
+            <h2
+              class="text-4xl font-black mb-4 tracking-tighter text-slate-900"
+            >
+              Jadwal Perawatan Berkala
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Pastikan durabilitas maksimal hingga 100.000 jam dengan mengikuti
+              panduan perawatan rutin berikut.
+            </p>
+          </div>
+
+          <div
+            class="overflow-x-auto mb-20 shadow-2xl shadow-slate-200/50 rounded-3xl border border-slate-100"
+          >
+            <table class="w-full text-left">
+              <thead
+                class="bg-slate-50 border-b border-slate-100 text-xs font-bold uppercase text-slate-400"
+              >
+                <tr>
+                  <th class="p-6">Interval</th>
+                  <th class="p-6">Komponen</th>
+                  <th class="p-6">Tindakan Teknis</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm divide-y divide-slate-50">
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="p-6">
+                    <span
+                      class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-bold uppercase"
+                      >Mingguan</span
+                    >
+                  </td>
+                  <td class="p-6 font-bold text-slate-900">Suhu & Software</td>
+                  <td class="p-6 text-slate-500 text-xs leading-relaxed">
+                    Monitor suhu operasional via NovaLCT (30°C - 55°C).
+                    Bersihkan cache PC Player dan log sistem.
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="p-6">
+                    <span
+                      class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-[10px] font-bold uppercase"
+                      >Bulanan</span
+                    >
+                  </td>
+                  <td class="p-6 font-bold text-slate-900">Kabel & Konektor</td>
+                  <td class="p-6 text-slate-500 text-xs leading-relaxed">
+                    Inspeksi fisik kabel data LAN dan power AC. Pastikan tidak
+                    ada konektor yang panas atau kendur.
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition-colors">
+                  <td class="p-6">
+                    <span
+                      class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold uppercase"
+                      >6 Bulanan</span
+                    >
+                  </td>
+                  <td class="p-6 font-bold text-slate-900">
+                    Fisik & Kalibrasi
+                  </td>
+                  <td class="p-6 text-slate-500 text-xs leading-relaxed">
+                    Pembersihan debu internal dengan udara bertekanan rendah.
+                    Kalibrasi ulang warna untuk menjaga keseragaman visual.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-all"
+              >
+                <i class="fas fa-magnet text-xl"></i>
+              </div>
+              <h4 class="font-bold text-sm mb-3 uppercase tracking-wider">
+                1. Front Service
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Perawatan modul dari sisi depan menggunakan alat vakum magnetik
+                tanpa perlu akses ke belakang rangka.
+              </p>
+            </div>
+
+            <div
+              class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"
+              >
+                <i class="fas fa-exchange-alt text-xl"></i>
+              </div>
+              <h4 class="font-bold text-sm mb-3 uppercase tracking-wider">
+                2. Hot Swapping
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Kemudahan penggantian modul yang rusak secara langsung tanpa
+                harus mematikan power sistem seluruhnya.
+              </p>
+            </div>
+
+            <div
+              class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-amber-600 group-hover:text-white transition-all"
+              >
+                <i class="fas fa-magic text-xl"></i>
+              </div>
+              <h4 class="font-bold text-sm mb-3 uppercase tracking-wider">
+                3. Smart Calibration
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Proses sinkronisasi warna otomatis agar modul baru memiliki
+                tingkat kecerahan yang sama dengan modul lama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      id="troubleshoot"
+      class="py-24 bg-slate-900 text-white overflow-hidden relative"
+    >
+      <div
+        class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-yellow-500/5 blur-[100px]"
+      ></div>
+
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h4
+            class="text-yellow-500 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+          >
+            Self-Diagnosis Tool
+          </h4>
+          <h2 class="text-4xl font-black mb-6 tracking-tighter">
+            Diagram Troubleshooting Cepat
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Gunakan alur di bawah ini jika terjadi kendala pada layar sebelum
+            menghubungi teknisi HDeVIEW.
+          </p>
+        </div>
+
+        <div
+          class="relative bg-slate-950/50 p-8 md:p-12 rounded-[3rem] md:rounded-[4rem] border border-white/5 shadow-2xl"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start relative"
+          >
+            <div class="flex flex-col items-center group">
+              <div
+                class="w-full p-6 bg-slate-800 rounded-3xl border-2 border-yellow-500/50 text-center shadow-lg shadow-yellow-500/5"
+              >
+                <p
+                  class="text-[10px] font-bold uppercase text-yellow-500 mb-2 tracking-widest"
+                >
+                  Masalah Utama
+                </p>
+                <h5 class="text-sm font-bold uppercase">Layar Mati Total</h5>
+              </div>
+              <div
+                class="h-8 w-0.5 bg-gradient-to-b from-yellow-500/50 to-transparent my-2 hidden md:block"
+              ></div>
+              <i
+                class="fas fa-chevron-right text-yellow-500/30 hidden md:block absolute top-1/2 -right-2 translate-x-full"
+              ></i>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-full p-6 bg-slate-800/50 rounded-3xl border border-white/10 text-center hover:border-white/20 transition-all"
+              >
+                <p class="text-[10px] font-bold uppercase text-slate-500 mb-2">
+                  Cek 01
+                </p>
+                <h5 class="text-sm font-bold">Indikator Power PSU</h5>
+                <p class="text-[10px] text-slate-500 mt-2 italic leading-tight">
+                  Apakah lampu hijau di dalam kabinet menyala?
+                </p>
+              </div>
+              <div class="flex justify-between w-full px-2 mt-4">
+                <div
+                  class="text-[9px] text-emerald-400 font-bold bg-emerald-400/10 px-2 py-1 rounded"
+                >
+                  YA &rarr; Lanjut
+                </div>
+                <div
+                  class="text-[9px] text-red-400 font-bold bg-red-400/10 px-2 py-1 rounded"
+                >
+                  TIDAK (Cek MCB)
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-full p-6 bg-slate-800/50 rounded-3xl border border-white/10 text-center hover:border-white/20 transition-all"
+              >
+                <p class="text-[10px] font-bold uppercase text-slate-500 mb-2">
+                  Cek 02
+                </p>
+                <h5 class="text-sm font-bold">Indikator Signal</h5>
+                <p class="text-[10px] text-slate-500 mt-2 italic leading-tight">
+                  Apakah lampu hijau/merah berkedip?
+                </p>
+              </div>
+              <div class="flex justify-between w-full px-2 mt-4">
+                <div
+                  class="text-[9px] text-emerald-400 font-bold bg-emerald-400/10 px-2 py-1 rounded"
+                >
+                  YA (Cek PC)
+                </div>
+                <div
+                  class="text-[9px] text-red-400 font-bold bg-red-400/10 px-2 py-1 rounded"
+                >
+                  TIDAK (Cek LAN)
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div
+                class="w-full p-6 bg-emerald-500/10 rounded-3xl border-2 border-emerald-500/30 text-center shadow-lg shadow-emerald-500/5 transition-transform hover:scale-105"
+              >
+                <p
+                  class="text-[10px] font-bold uppercase text-emerald-500 mb-2"
+                >
+                  Solusi Akhir
+                </p>
+                <h5 class="text-sm font-bold italic">Software Re-Sync</h5>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">
+                  Buka <span class="text-white font-bold">NovaLCT</span>, masuk
+                  ke Screen Connection, lalu klik
+                  <span class="text-white underline">Reload</span> dari
+                  hardware.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 border-t border-white/5 pt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h5 class="text-xl font-bold mb-6 flex items-center gap-3">
+                  <i class="fas fa-lightbulb text-yellow-500 text-sm"></i>
+                  Memahami Lampu Indikator
+                </h5>
+                <ul class="space-y-5">
+                  <li class="flex items-start gap-4 text-xs text-slate-400">
+                    <span
+                      class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse mt-0.5 shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                    ></span>
+                    <div>
+                      <strong class="text-white block mb-0.5"
+                        >Hijau Berkedip Cepat (1x/detik):</strong
+                      >
+                      Sinyal data normal. Receiving card bekerja dengan baik.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4 text-xs text-slate-400">
+                    <span
+                      class="w-3 h-3 rounded-full bg-red-500 mt-0.5 shadow-[0_0_8px_rgba(239,68,68,0.8)]"
+                    ></span>
+                    <div>
+                      <strong class="text-white block mb-0.5"
+                        >Merah Statis / Nyala Terus:</strong
+                      >
+                      Kabel Power tersambung, namun
+                      <span class="text-red-400 font-bold"
+                        >tidak ada input data</span
+                      >
+                      (Cek kabel LAN dari Sending Box).
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4 text-xs text-slate-400">
+                    <span
+                      class="w-3 h-3 rounded-full bg-slate-700 mt-0.5"
+                    ></span>
+                    <div>
+                      <strong class="text-white block mb-0.5"
+                        >Indikator Mati Total:</strong
+                      >
+                      Tidak ada aliran listrik. Cek PSU atau colokan Power AC
+                      kabinet.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="bg-slate-900 rounded-[2rem] p-8 border border-white/5 flex flex-col items-center justify-center text-center group"
+              >
+                <i
+                  class="fas fa-headset text-4xl text-slate-700 mb-4 group-hover:text-yellow-500 transition-colors"
+                ></i>
+                <h6 class="text-sm font-bold mb-2">
+                  Butuh Bantuan Lebih Lanjut?
+                </h6>
+                <p class="text-[11px] text-slate-500 mb-6">
+                  Jika langkah di atas tidak menyelesaikan masalah, hubungi
+                  teknisi kami via WhatsApp.
+                </p>
+                <a
+                  href="https://wa.me/6281387873874"
+                  class="bg-white text-slate-950 px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-yellow-500 transition-colors"
+                >
+                  Contact Support
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h4
+            class="text-blue-600 font-bold text-xs uppercase tracking-[0.3em] mb-4"
+          >
+            Informasi Tambahan
+          </h4>
+          <h2
+            class="text-3xl font-black text-slate-900 uppercase tracking-tighter sm:text-4xl"
+          >
+            Technical FAQ
+          </h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid gap-6">
+          <div
+            class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 bg-red-50 text-red-500 rounded-full flex-none flex items-center justify-center"
+              >
+                <i class="fas fa-bolt text-sm"></i>
+              </div>
+              <div>
+                <h4
+                  class="font-bold text-slate-900 mb-3 text-lg leading-snug group-hover:text-blue-600 transition-colors"
+                >
+                  Layar berkedip (flickering) setelah ganti konten?
+                </h4>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                  Biasanya disebabkan oleh
+                  <span class="font-semibold text-slate-700">refresh rate</span>
+                  yang tidak sesuai atau kabel LAN yang longgar. Pastikan kabel
+                  Cat6 terpasang sempurna dan cek setting refresh rate di
+                  NovaLCT. Untuk Videotron standar HDeVIEW, pastikan berada di
+                  rentang
+                  <span
+                    class="bg-slate-100 px-2 py-0.5 rounded text-slate-800 font-mono"
+                    >1920Hz - 3840Hz</span
+                  >
+                  agar nyaman di mata dan kamera.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 bg-emerald-50 text-emerald-500 rounded-full flex-none flex items-center justify-center"
+              >
+                <i class="fas fa-clock text-sm"></i>
+              </div>
+              <div>
+                <h4
+                  class="font-bold text-slate-900 mb-3 text-lg leading-snug group-hover:text-blue-600 transition-colors"
+                >
+                  Bagaimana cara mengatur jadwal mati/nyala otomatis?
+                </h4>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                  Gunakan fitur
+                  <span class="font-semibold text-slate-700"
+                    >"Schedule Control"</span
+                  >
+                  pada NovaLCT atau ViPlex. Anda bisa mengatur jam operasional
+                  (misal: 08.00 - 22.00). Fitur ini sangat disarankan untuk
+                  memperpanjang usia lampu LED hingga 100.000 jam dan menghemat
+                  konsumsi listrik harian Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            <div class="flex gap-4 items-start">
+              <div
+                class="w-10 h-10 bg-blue-50 text-blue-500 rounded-full flex-none flex items-center justify-center"
+              >
+                <i class="fas fa-palette text-sm"></i>
+              </div>
+              <div>
+                <h4
+                  class="font-bold text-slate-900 mb-3 text-lg leading-snug group-hover:text-blue-600 transition-colors"
+                >
+                  Warna antara modul baru dan lama berbeda?
+                </h4>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                  Ini adalah karakteristik alami dioda LED. Setiap batch
+                  produksi memiliki perbedaan *binning* warna tipis. Solusinya,
+                  jalankan fitur
+                  <span class="font-semibold text-slate-700"
+                    >"Coefficient Calibration"</span
+                  >
+                  di NovaStar. Software akan menyesuaikan parameter modul baru
+                  agar menyatu sempurna dengan modul lama yang sudah terpasang.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-slate-950 py-20 text-center border-t border-white/5 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-blue-500/5 blur-[120px] rounded-full"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center mb-10">
+          <!-- <div class="relative flex items-center justify-center mb-4">
+            <div
+              class="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full scale-150 opacity-50"
+            ></div>
+
+            <img
+              src="img/HDe-2.png"
+              alt="HDe Logo Footer"
+              class="h-12 md:h-16 w-auto object-contain relative z-10 brightness-110 filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+            />
+          </div> -->
+          <div class="text-white font-black tracking-[0.4em] text-sm uppercase">
+            HDe <span class="text-blue-500">Technology</span>
+          </div>
+        </div>
+
+        <div
+          class="w-24 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mx-auto mb-8"
+        ></div>
+
+        <p
+          class="text-[9px] font-medium text-slate-600 uppercase tracking-[0.3em] leading-relaxed"
+        >
+          © 2026 <span class="text-slate-400">HDe Technology</span>.
+        </p>
+      </div>
+    </footer>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.getElementById("main-navbar");
+      const scrollThreshold = 80; // Navbar baru akan sembunyi setelah scroll sejauh ini
+
+      window.addEventListener(
+        "scroll",
+        function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          // Pastikan nilai scrollTop tidak negatif (terjadi di iOS bounce effect)
+          if (scrollTop < 0) scrollTop = 0;
+
+          // Logika Sembunyi/Muncul
+          if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            // SCROLL DOWN: Sembunyikan Navbar
+            navbar.style.transform = "translateY(-100%)";
+            // Jika menu mobile sedang terbuka, otomatis tutup juga
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu) mobileMenu.classList.add("hidden");
+          } else {
+            // SCROLL UP atau di Paling Atas: Munculkan Navbar
+            navbar.style.transform = "translateY(0)";
+          }
+
+          // Efek Tambahan: Membuat navbar lebih solid/gelap saat sudah tidak di posisi 0
+          if (scrollTop > 20) {
+            navbar.classList.add("bg-slate-950/95", "shadow-2xl");
+            navbar.classList.remove("bg-slate-950/90");
+          } else {
+            navbar.classList.add("bg-slate-950/90");
+            navbar.classList.remove("shadow-2xl");
+          }
+
+          lastScrollTop = scrollTop;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

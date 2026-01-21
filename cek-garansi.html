@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>License & QC Validation | HDe Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-white border-b py-4">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="font-bold text-blue-700"
+          >HDe <span class="text-gray-900">LICENSE</span></a
+        >
+        <a
+          href="index.html"
+          class="text-xs font-bold text-gray-400 uppercase tracking-widest"
+          >Kembali</a
+        >
+      </div>
+    </nav>
+
+    <section class="py-16">
+      <div class="container mx-auto px-6 max-w-2xl">
+        <div
+          class="bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 p-8 md:p-12"
+        >
+          <div class="text-center mb-10">
+            <div
+              class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl"
+            >
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h1 class="text-2xl font-bold">Cek Lisensi & Garansi</h1>
+            <p class="text-gray-500 text-sm mt-2">
+              Validasi Serial Number untuk melihat data QC dan masa aktif
+              garansi.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+    <div>
+        <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2">Serial Number / No. Kontrak</label>
+        <div class="relative">
+            <i class="fas fa-barcode absolute left-4 top-1/2 -translate-y-1/2 text-gray-300"></i>
+            <input type="text" id="snInput" placeholder="HDE-QC-2026-XXX" class="w-full p-4 pl-12 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition uppercase font-mono text-sm" />
+        </div>
+    </div>
+
+    <div class="relative py-2">
+        <div class="absolute inset-0 flex items-center"><span class="w-full border-t border-gray-100"></span></div>
+        <div class="relative flex justify-center text-[9px] uppercase"><span class="bg-white px-2 text-gray-300 font-bold">Atau Gunakan Tanggal</span></div>
+    </div>
+
+    <div>
+        <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2">Tanggal Serah Terima (Estimasi)</label>
+        <input type="date" id="tglManual" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition text-sm text-gray-500" />
+    </div>
+
+    <button onclick="prosesValidasi()" id="btnValidasi" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200 uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+        <span>Validasi Lisensi</span>
+    </button>
+</div>
+
+<div id="hasilValidasi" class="hidden mt-10 space-y-6 animate-in fade-in zoom-in duration-500">
+    <div class="h-[1px] bg-gray-100 w-full mb-6"></div>
+    
+    <div class="flex justify-between items-center">
+        <div id="statusBadge" class="px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest"></div>
+        <div class="text-right">
+            <p id="labelTipe" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Verified Data</p>
+            <p class="text-[8px] text-gray-300">ID: <span id="valID">HDE-VLD-XXXX</span></p>
+        </div>
+    </div>
+
+    <div class="text-center bg-gray-50 rounded-[2rem] p-8 border border-gray-100 relative overflow-hidden">
+        <h2 id="sisaWaktu" class="text-5xl font-black mb-2 tracking-tighter">0 Hari</h2>
+        <p id="tglBerakhir" class="text-gray-500 text-xs font-medium uppercase tracking-widest"></p>
+        <div class="absolute -bottom-2 -right-2 opacity-[0.03] rotate-[-15deg]">
+            <i class="fas fa-shield-check text-9xl"></i>
+        </div>
+    </div>
+
+    <div id="dataQC" class="grid grid-cols-2 gap-4">
+        <div class="bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
+            <p class="text-[9px] text-blue-400 font-bold uppercase tracking-widest mb-1">Status QC</p>
+            <p id="qcStatusText" class="text-sm font-bold text-blue-900 italic">Passed</p>
+        </div>
+        <div class="bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
+            <p class="text-[9px] text-blue-400 font-bold uppercase tracking-widest mb-1">Inspector</p>
+            <p id="qcInspector" class="text-sm font-bold text-blue-900 text-xs">System Bot</p>
+        </div>
+    </div>
+
+    <div class="bg-gray-900 text-white p-6 rounded-3xl flex justify-between items-center">
+        <div>
+            <p class="text-[9px] text-gray-500 font-bold uppercase tracking-widest mb-2">Informasi Unit</p>
+            <h4 id="namaUnit" class="font-bold text-sm mb-1">-</h4>
+            <p id="noKontrak" class="text-[10px] text-blue-400 font-mono"></p>
+        </div>
+        
+    </div>
+
+    <button
+  onclick="window.print()"
+  class="print:hidden w-full border-2 border-dashed border-gray-200 py-3 rounded-xl text-xs font-bold text-gray-400 hover:bg-gray-50 transition flex items-center justify-center gap-2"
+>
+  <i class="fas fa-file-pdf"></i> CETAK LAPORAN RESMI
+</button>
+</div>
+
+<script>
+    const databaseQC = {
+        "HDE-QC-2026-001": {
+            unit: "Interactive Flat Panel 75 Inch 4K",
+            tglBeli: "2025-01-15",
+            inspector: "Andri Gunawan",
+            statusQC: "PASSED (Excellent)",
+            noKontrak: "KTR/HDE/001/2025",
+        }
+    };
+
+    function prosesValidasi() {
+        const btn = document.getElementById("btnValidasi");
+        const sn = document.getElementById("snInput").value.toUpperCase();
+        const tglManual = document.getElementById("tglManual").value;
+        const res = document.getElementById("hasilValidasi");
+
+        // Validasi Input Kosong
+        if (!sn && !tglManual) {
+            alert("Harap masukkan Serial Number atau Tanggal!");
+            return;
+        }
+
+        // Efek Loading
+        btn.disabled = true;
+        btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Memvalidasi...`;
+        res.classList.add("hidden");
+
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = `<span>Validasi Lisensi</span>`;
+            
+            let finalTglBeli, finalUnit, finalInspector, finalQC, finalKontrak;
+
+            if (databaseQC[sn]) {
+                const data = databaseQC[sn];
+                finalTglBeli = new Date(data.tglBeli);
+                finalUnit = data.unit;
+                finalInspector = data.inspector;
+                finalQC = data.statusQC;
+                finalKontrak = data.noKontrak;
+                document.getElementById("labelTipe").innerText = "Verified QC Data";
+                document.getElementById("dataQC").classList.remove("hidden");
+            } else if (tglManual) {
+                finalTglBeli = new Date(tglManual);
+                finalUnit = "Hardware (Manual Input)";
+                finalInspector = "N/A";
+                finalQC = "Unverified";
+                finalKontrak = "Estimasi Berdasarkan Invoice";
+                document.getElementById("labelTipe").innerText = "Estimation Data";
+                document.getElementById("dataQC").classList.add("hidden");
+            } else {
+                alert("Serial Number tidak ditemukan dalam database HDe!");
+                return;
+            }
+
+            const tglExp = new Date(finalTglBeli);
+            tglExp.setFullYear(tglExp.getFullYear() + 2);
+            const hariIni = new Date();
+            const sisaHari = Math.ceil((tglExp - hariIni) / (1000 * 60 * 60 * 24));
+
+            res.classList.remove("hidden");
+            document.getElementById("valID").innerText = "HDE-VLD-" + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("namaUnit").innerText = finalUnit;
+            document.getElementById("noKontrak").innerText = finalKontrak;
+            document.getElementById("qcInspector").innerText = finalInspector;
+            document.getElementById("qcStatusText").innerText = finalQC;
+            document.getElementById("tglBerakhir").innerText = "Masa Aktif Hingga: " + tglExp.toLocaleDateString("id-ID", {day: "numeric", month: "long", year: "numeric"});
+
+            const badge = document.getElementById("statusBadge");
+            const sisaText = document.getElementById("sisaWaktu");
+
+            if (sisaHari > 0) {
+                badge.className = "px-4 py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-100 text-emerald-700";
+                badge.innerText = "Garansi Aktif";
+                sisaText.innerText = sisaHari + " Hari";
+                sisaText.className = "text-5xl font-black mb-2 tracking-tighter text-emerald-600";
+            } else {
+                badge.className = "px-4 py-1 rounded-full text-[10px] font-bold uppercase bg-red-100 text-red-700";
+                badge.innerText = "Garansi Expired";
+                sisaText.innerText = "EXPIRED";
+                sisaText.className = "text-5xl font-black mb-2 tracking-tighter text-red-600";
+            }
+        }, 1200); // Penundaan 1.2 detik agar terasa 'memproses'
+    }
+</script>
+
+   <style>
+  @media print {
+    /* 1. Sembunyikan semua elemen kecuali area laporan */
+    body * {
+      visibility: hidden;
+    }
+    
+    #hasilValidasi, #hasilValidasi * {
+      visibility: visible;
+    }
+
+    /* 2. Atur posisi laporan agar pas di tengah kertas A4 */
+    #hasilValidasi {
+      position: absolute;
+      left: 0;
+      top: 50px; /* Jarak dari atas kertas */
+      width: 100%;
+      visibility: visible;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* 3. Sembunyikan tombol cetak agar tidak ikut ter-print */
+    button, .print-hidden {
+      display: none !important;
+    }
+
+    /* 4. Pengaturan Kertas */
+    @page {
+      size: A4;
+      margin: 20mm;
+    }
+
+    /* 5. Memaksa printer mengeluarkan warna (Sangat penting untuk Badge & Bar biru) */
+    body {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      background-color: white !important;
+    }
+
+    /* Merapikan border dan background saat cetak */
+    .bg-gray-900 {
+      background-color: #111827 !important; /* Warna hitam info unit */
+      color: white !important;
+    }
+    .bg-gray-50 {
+      background-color: #f9fafb !important;
+    }
+    .text-green-600 {
+      color: #059669 !important;
+    }
+  }
+</style>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 1. Menghilangkan .html dari URL (Internal Redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 2. Redirect jika user mengetik .html secara manual (Optional tapi disarankan)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
